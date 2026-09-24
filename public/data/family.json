@@ -1,0 +1,1193 @@
+{
+  "version": 2,
+  "trees": [
+    {
+      "uid": "z4lpr6i03p",
+      "name": "Familia Fernández Pato",
+      "people": [
+        {
+          "id": "mario-gomez",
+          "firstName": "Mario",
+          "lastName": "Gomez Roca",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juana-mosquera",
+          "firstName": "Juana",
+          "lastName": "Mosquera Tome",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "cosme-pato",
+          "firstName": "Cosme",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "dolores-rodriguez",
+          "firstName": "Dolores",
+          "lastName": "Rodriguez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "ramon-gomez",
+          "firstName": "Ramón",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "melchora-mosquera",
+          "firstName": "Melchora",
+          "lastName": "Mosquera",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "domingo-pato",
+          "firstName": "Domingo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gabriela-fraga",
+          "firstName": "Gabriela",
+          "lastName": "Fraga",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "francisco-pato",
+          "firstName": "Francisco",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "carmen-valino",
+          "firstName": "Carmen",
+          "lastName": "Valiño",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juana-pato",
+          "firstName": "Juana",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-uzal",
+          "firstName": "Juan",
+          "lastName": "Uzal",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "antonia-pato",
+          "firstName": "Antonia",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gumersindo-garcia",
+          "firstName": "Gumersindo",
+          "lastName": "Garcia",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-pato",
+          "firstName": "Juan",
+          "lastName": "Pato",
+          "photo": "photos/juan-pato.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "matilde-gomez",
+          "firstName": "Matilde",
+          "lastName": "Gomez",
+          "photo": "photos/matilde-gomez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "melchor-gomez",
+          "firstName": "Melchor",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "ramon-gomez-2",
+          "firstName": "Ramón",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "francisco-gomez",
+          "firstName": "Francisco",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "carmen-gomez",
+          "firstName": "Carmen",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "jose-maria-alvarez",
+          "firstName": "José María",
+          "lastName": "Alvarez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-gomez",
+          "firstName": "María",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "francisco-perrino",
+          "firstName": "Francisco",
+          "lastName": "Perrino",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "domingo-pato-2",
+          "firstName": "Domingo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "delia-pato",
+          "firstName": "Delia",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "raimundo-pato",
+          "firstName": "Raimundo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-angelica-pato",
+          "firstName": "Maria Angélica",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "averino-pato",
+          "firstName": "Averino",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "elvira-pato",
+          "firstName": "Elvira",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "mercedes-uzal",
+          "firstName": "Mercedes",
+          "lastName": "Uzal",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "delfina-uzal",
+          "firstName": "Delfina",
+          "lastName": "Uzal",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "mercedes-garcia",
+          "firstName": "Mercedes",
+          "lastName": "Garcia",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "delfina-garcia",
+          "firstName": "Delfina",
+          "lastName": "Garcia",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-c-pato",
+          "firstName": "Juan Carlos",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "matilde-m-gomez",
+          "firstName": "Matilde M.",
+          "lastName": "Gomez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "guillermo-pato",
+          "firstName": "Guillermo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "elsa-novo",
+          "firstName": "Elsa",
+          "lastName": "Novo",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "amanda-",
+          "firstName": "Maria Amanda",
+          "lastName": "",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "claudio-pato",
+          "firstName": "Claudio",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "rosa-porraz",
+          "firstName": "Rosa",
+          "lastName": "Porraz",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "julia-pato",
+          "firstName": "Julia",
+          "lastName": "Pato",
+          "photo": "photos/julia-pato.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-fernandez",
+          "firstName": "Juan Carlos",
+          "lastName": "Fernández",
+          "photo": "photos/juan-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "osvaldo-pato",
+          "firstName": "Osvaldo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-martinez",
+          "firstName": "Maria L.",
+          "lastName": "Martinez",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "leonor-nonell",
+          "firstName": "Leonor",
+          "lastName": "Nonell",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "eduardo-pato",
+          "firstName": "Eduardo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "elsa-pato",
+          "firstName": "Elsa Cristina",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "osvaldo-valiarino",
+          "firstName": "Osvaldo",
+          "lastName": "Valiarino",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "hector-fernandez",
+          "firstName": "Héctor",
+          "lastName": "Fernández",
+          "photo": "photos/hector-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "marta-reus",
+          "firstName": "Marta Teresa",
+          "lastName": "Reus",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "claudia-scotto",
+          "firstName": "Claudia Alejandra",
+          "lastName": "Scotto",
+          "photo": "photos/claudia-scotto.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "carlos-seifritz",
+          "firstName": "Carlos",
+          "lastName": "Seifritz",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "carlos-fernandez",
+          "firstName": "Carlos",
+          "lastName": "Fernández",
+          "photo": "photos/carlos-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-binetti",
+          "firstName": "María",
+          "lastName": "Binetti",
+          "photo": "photos/maria-binetti.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gustavo-pato",
+          "firstName": "Gustavo",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "mabel-mendoza",
+          "firstName": "Mabel",
+          "lastName": "Mendoza",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "andres-pato",
+          "firstName": "Andres",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "celina-garrido",
+          "firstName": "Celina",
+          "lastName": "Garrido",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "carmen-sorrides",
+          "firstName": "Carmen",
+          "lastName": "Sorrides",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "sonia-mistretta",
+          "firstName": "Sonia",
+          "lastName": "Mistretta",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "cecilia-pato",
+          "firstName": "Cecilia M.",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "pablo-paladini",
+          "firstName": "Pablo",
+          "lastName": "Paladini",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "guillermo-valiarino",
+          "firstName": "Guillermo",
+          "lastName": "Valiarino",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "andres-valiarino",
+          "firstName": "Andrés",
+          "lastName": "Valiarino",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "osvaldo-valiarino-2",
+          "firstName": "Osvaldo",
+          "lastName": "Valiarino",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "natalia-fernandez",
+          "firstName": "Natalia",
+          "lastName": "Fernández",
+          "photo": "photos/natalia-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gon-fernandez",
+          "firstName": "Gonzalo Javier",
+          "lastName": "Fernández",
+          "photo": "photos/gon-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "adam-wood",
+          "firstName": "Adam John",
+          "lastName": "Wood",
+          "photo": "photos/adam-wood.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "christian-trapaglia",
+          "firstName": "Christian Guillermo",
+          "lastName": "Trapaglia",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "fabian-digiovanni",
+          "firstName": "Fabián",
+          "lastName": "Di Giovanni Mazzetti",
+          "photo": "photos/fabian-digiovanni.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "vanesa-seifritz",
+          "firstName": "Vanesa Alexandra",
+          "lastName": "Seifritz",
+          "photo": "photos/vanesa-seifritz.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "leo-goldaracena",
+          "firstName": "Leonardo Javier",
+          "lastName": "Goldaracena",
+          "photo": "photos/leo-goldaracena.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "soledad-fernandez",
+          "firstName": "María Soledad",
+          "lastName": "Fernández",
+          "photo": "photos/soledad-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "esteban-fernandez",
+          "firstName": "Esteban Matías",
+          "lastName": "Fernández",
+          "photo": "photos/esteban-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "angeles-fernandez",
+          "firstName": "María de los Angeles",
+          "lastName": "Fernández",
+          "photo": "photos/angeles-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "fernando-cano",
+          "firstName": "Fernando",
+          "lastName": "Cano",
+          "photo": "photos/fernando-cano.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "silvia-iencenella",
+          "firstName": "Silvia Mabel",
+          "lastName": "Iencenella",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gustavo-seoane",
+          "firstName": "Gustavo",
+          "lastName": "Seoane",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "victoria-taylor",
+          "firstName": "Victoria",
+          "lastName": "Taylor",
+          "photo": "photos/victoria-taylor.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "natalia-pato",
+          "firstName": "Natalia",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "jose-yad",
+          "firstName": "Jose",
+          "lastName": "Yad",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "fernando-pato",
+          "firstName": "Fernando",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "agustina-pato",
+          "firstName": "Agustina",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gabriel-kraizer",
+          "firstName": "Gabriel",
+          "lastName": "Kraizer",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "roberto-pato",
+          "firstName": "Roberto O.",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-pato",
+          "firstName": "Maria A.",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "luciana-pato",
+          "firstName": "Luciana",
+          "lastName": "Pato",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-paladini",
+          "firstName": "Juan I.",
+          "lastName": "Paladini",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "santiago-paladini",
+          "firstName": "Santiago",
+          "lastName": "Paladini",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
+          "id": "agustina-trapaglia",
+          "firstName": "Agustina",
+          "lastName": "Trapaglia",
+          "photo": "photos/agustina-trapaglia.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "lucio-digiovanni",
+          "firstName": "Lucio",
+          "lastName": "Di Giovanni Mazzetti",
+          "photo": "photos/lucio-digiovanni.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "cata-cano",
+          "firstName": "Catalina",
+          "lastName": "Cano",
+          "photo": "photos/cata-cano.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "renata-seoane",
+          "firstName": "Renata",
+          "lastName": "Seoane Fernández",
+          "photo": "photos/renata-seoane.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juani-seoane",
+          "firstName": "Juan Ignacio",
+          "lastName": "Seoane Fernández",
+          "photo": "photos/juani-seoane.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "valentino-fernandez",
+          "firstName": "Valentino",
+          "lastName": "Fernández",
+          "photo": "photos/valentino-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "guadalupe-fernandez",
+          "firstName": "Guadalupe",
+          "lastName": "Fernandez",
+          "photo": "photos/guadalupe-fernandez.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "paris-yad",
+          "firstName": "Paris M.",
+          "lastName": "Yad",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "simon-yad",
+          "firstName": "Simón J.",
+          "lastName": "Yad",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "pedro-yad",
+          "firstName": "Pedro B.",
+          "lastName": "Yad",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "tomas-kraizer",
+          "firstName": "Tomás",
+          "lastName": "Kraizer",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "olivia-kraizer",
+          "firstName": "Olivia",
+          "lastName": "Kraizer",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        }
+      ],
+
+      "unions": [
+        {
+          "id": "u-natalia-christian",
+          "partners": ["natalia-fernandez", "christian-trapaglia"],
+          "status": "divorced",
+          "children": ["agustina-trapaglia"]
+        },
+        {
+          "id": "u-natalia-fabian",
+          "partners": ["natalia-fernandez", "fabian-digiovanni"],
+          "status": "married",
+          "children": ["lucio-digiovanni"]
+        },
+        {
+          "id": "u-gon-adam",
+          "partners": ["gon-fernandez", "adam-wood"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-vanesa-leo",
+          "partners": ["vanesa-seifritz", "leo-goldaracena"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-sole-gustavo",
+          "partners": ["soledad-fernandez", "gustavo-seoane"],
+          "status": "divorced",
+          "children": ["renata-seoane", "juani-seoane"]
+        },
+        {
+          "id": "u-esteban-silvia",
+          "partners": ["esteban-fernandez", "silvia-iencenella"],
+          "status": "divorced",
+          "children": ["valentino-fernandez", "guadalupe-fernandez"]
+        },
+        {
+          "id": "u-esteban-vicky",
+          "partners": ["esteban-fernandez", "victoria-taylor"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-angie-fernando",
+          "partners": ["fernando-cano", "angeles-fernandez"],
+          "status": "married",
+          "children": ["cata-cano"]
+        },
+        {
+          "id": "u-natalia-jose",
+          "partners": ["natalia-pato", "jose-yad"],
+          "status": "married",
+          "children": ["paris-yad", "simon-yad", "pedro-yad"]
+        },
+        {
+          "id": "u-agustina-gabriel",
+          "partners": ["agustina-pato", "gabriel-kraizer"],
+          "status": "married",
+          "children": ["tomas-kraizer", "olivia-kraizer"]
+        },
+
+        {
+          "id": "u-hector-marta",
+          "partners": ["hector-fernandez", "marta-reus"],
+          "status": "divorced",
+          "children": ["natalia-fernandez", "gon-fernandez"]
+        },
+        {
+          "id": "u-hector-claudia",
+          "partners": ["hector-fernandez", "claudia-scotto"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-claudia-carlos",
+          "partners": ["claudia-scotto", "carlos-seifritz"],
+          "status": "divorced",
+          "children": ["vanesa-seifritz"]
+        },
+        {
+          "id": "u-carlitos-mari",
+          "partners": ["carlos-fernandez", "maria-binetti"],
+          "status": "married",
+          "children": [
+            "soledad-fernandez",
+            "esteban-fernandez",
+            "angeles-fernandez"
+          ]
+        },
+        {
+          "id": "u-elsa-osvaldo",
+          "partners": ["elsa-pato", "osvaldo-valiarino"],
+          "status": "married",
+          "children": [
+            "guillermo-valiarino",
+            "andres-valiarino",
+            "osvaldo-valiarino-2"
+          ]
+        },
+        {
+          "id": "u-gustavo-mabel",
+          "partners": ["gustavo-pato", "mabel-mendoza"],
+          "status": "married",
+          "children": ["natalia-pato", "fernando-pato", "agustina-pato"]
+        },
+        {
+          "id": "u-andres-celina",
+          "partners": ["andres-pato", "celina-garrido"],
+          "status": "divorced",
+          "children": ["roberto-pato", "maria-pato"]
+        },
+        {
+          "id": "u-andres-carmen",
+          "partners": ["andres-pato", "carmen-sorrides"],
+          "status": "divorced",
+          "children": []
+        },
+        {
+          "id": "u-andres-sonia",
+          "partners": ["andres-pato", "sonia-mistretta"],
+          "status": "married",
+          "children": ["luciana-pato"]
+        },
+        {
+          "id": "u-cecilia-pablo",
+          "partners": ["cecilia-pato", "pablo-paladini"],
+          "status": "married",
+          "children": ["juan-paladini", "santiago-paladini"]
+        },
+
+        {
+          "id": "u-juan-julia",
+          "partners": ["juan-fernandez", "julia-pato"],
+          "status": "married",
+          "children": ["hector-fernandez", "carlos-fernandez"]
+        },
+        {
+          "id": "u-juanc-matildem",
+          "partners": ["juan-c-pato", "matilde-m-gomez"],
+          "status": "married",
+          "children": ["eduardo-pato"]
+        },
+        {
+          "id": "u-claudio-rosa",
+          "partners": ["claudio-pato", "rosa-porraz"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-guillermo-elsa",
+          "partners": ["guillermo-pato", "elsa-novo"],
+          "status": "divorced",
+          "children": ["elsa-pato"]
+        },
+        {
+          "id": "u-guillermo-amanda",
+          "partners": ["guillermo-pato", "amanda-"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-osvaldo-maria",
+          "partners": ["osvaldo-pato", "maria-martinez"],
+          "status": "divorced",
+          "children": ["gustavo-pato", "andres-pato"]
+        },
+        {
+          "id": "u-osvaldo-leonor",
+          "partners": ["osvaldo-pato", "leonor-nonell"],
+          "status": "married",
+          "children": ["cecilia-pato"]
+        },
+
+        {
+          "id": "u-juan-matilde",
+          "partners": ["juan-pato", "matilde-gomez"],
+          "status": "married",
+          "children": [
+            "juan-c-pato",
+            "guillermo-pato",
+            "claudio-pato",
+            "julia-pato",
+            "osvaldo-pato"
+          ]
+        },
+        {
+          "id": "u-domingo-gabriela",
+          "partners": ["domingo-pato", "gabriela-fraga"],
+          "status": "married",
+          "children": [
+            "domingo-pato-2",
+            "delia-pato",
+            "raimundo-pato",
+            "maria-angelica-pato"
+          ]
+        },
+        {
+          "id": "u-francisco-carmen",
+          "partners": ["francisco-pato", "carmen-valino"],
+          "status": "married",
+          "children": ["averino-pato", "elvira-pato"]
+        },
+        {
+          "id": "u-juana-juan",
+          "partners": ["juan-uzal", "juana-pato"],
+          "status": "married",
+          "children": ["mercedes-uzal", "delfina-uzal"]
+        },
+        {
+          "id": "u-antonia-gumersindo",
+          "partners": ["antonia-pato", "gumersindo-garcia"],
+          "status": "married",
+          "children": ["mercedes-garcia", "delfina-garcia"]
+        },
+        {
+          "id": "u-carmen-jose",
+          "partners": ["carmen-gomez", "jose-maria-alvarez"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-maria-francisco",
+          "partners": ["maria-gomez", "francisco-perrino"],
+          "status": "married",
+          "children": []
+        },
+
+        {
+          "id": "u-cosme-dolores",
+          "partners": ["cosme-pato", "dolores-rodriguez"],
+          "status": "married",
+          "children": [
+            "domingo-pato",
+            "francisco-pato",
+            "juana-pato",
+            "antonia-pato",
+            "juan-pato"
+          ]
+        },
+        {
+          "id": "u-ramon-melchora",
+          "partners": ["ramon-gomez", "melchora-mosquera"],
+          "status": "married",
+          "children": [
+            "matilde-gomez",
+            "melchor-gomez",
+            "ramon-gomez-2",
+            "francisco-gomez",
+            "carmen-gomez",
+            "maria-gomez"
+          ]
+        },
+        {
+          "id": "u-mario-gomez",
+          "partners": ["mario-gomez"],
+          "status": "married",
+          "children": ["ramon-gomez"]
+        },
+        {
+          "id": "u-juana-mosquera",
+          "partners": ["juana-mosquera"],
+          "status": "married",
+          "children": ["melchora-mosquera"]
+        }
+      ]
+    }
+  ]
+}
