@@ -6,6 +6,46 @@
       "name": "Familia Fernández Pato",
       "people": [
         {
+          "id": "benito-rodriguez",
+          "firstName": "Benito",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-ramos",
+          "firstName": "María",
+          "lastName": "Ramos",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "salvador-pato",
+          "firstName": "Salvador",
+          "lastName": "Pato",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-espiñeira",
+          "firstName": "María",
+          "lastName": "Espiñeira",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
           "id": "mario-gomez",
           "firstName": "Mario",
           "lastName": "Gomez Roca",
@@ -47,6 +87,27 @@
           "deathDate": null
         },
         {
+          "id": "maria-pato-0",
+          "firstName": "María",
+          "lastName": "Pato",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gregorio-pato",
+          "firstName": "Gregorio",
+          "lastName": "Pato",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+
+        {
           "id": "ramon-gomez",
           "firstName": "Ramón",
           "lastName": "Gomez",
@@ -82,6 +143,26 @@
           "firstName": "Gabriela",
           "lastName": "Fraga",
           "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "josefa-pato",
+          "firstName": "Josefa",
+          "lastName": "Pato",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "jose-tome-fachal",
+          "firstName": "José",
+          "lastName": "Tomé Fachal",
+          "gender": "male",
           "photo": null,
           "nationality": [],
           "birthDate": null,
@@ -240,7 +321,7 @@
 
         {
           "id": "domingo-pato-2",
-          "firstName": "Domingo",
+          "firstName": "Domingo Antonio",
           "lastName": "Pato",
           "gender": "male",
           "photo": null,
@@ -249,8 +330,18 @@
           "deathDate": null
         },
         {
+          "id": "lidia-sandullo",
+          "firstName": "Lidia",
+          "lastName": "Sandullo",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
           "id": "delia-pato",
-          "firstName": "Delia",
+          "firstName": "María Delia",
           "lastName": "Pato",
           "gender": "female",
           "photo": null,
@@ -260,7 +351,7 @@
         },
         {
           "id": "raimundo-pato",
-          "firstName": "Raimundo",
+          "firstName": "Raymundo Jorge",
           "lastName": "Pato",
           "gender": "male",
           "photo": null,
@@ -458,6 +549,26 @@
           "birthDate": null,
           "deathDate": null
         },
+        {
+          "id": "dolores-tome",
+          "firstName": "Dolores",
+          "lastName": "Tomé",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-maria-rodriguez",
+          "firstName": "Juan María",
+          "lastName": "Rodriguez",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
 
         {
           "id": "eduardo-pato",
@@ -623,6 +734,86 @@
           "id": "pablo-paladini",
           "firstName": "Pablo",
           "lastName": "Paladini",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "juan-alberto-rodriguez",
+          "firstName": "Juan Alberto",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "raul-osvaldo-rodriguez",
+          "firstName": "Raul Osvaldo",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "amelia-guillin",
+          "firstName": "Amelia",
+          "lastName": "Guillin",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "hector-julio-rodriguez",
+          "firstName": "Héctor Julio",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "mario-jose-rodriguez",
+          "firstName": "Mario José",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "norma-francisca-rodriguez",
+          "firstName": "Norma Francisca",
+          "lastName": "Rodriguez",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "victor-omar-rodriguez",
+          "firstName": "Victor Omar",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "gabriel-eduardo-pato",
+          "firstName": "Gabriel Eduardo",
+          "lastName": "Pato",
           "gender": "male",
           "photo": null,
           "nationality": [],
@@ -1026,86 +1217,86 @@
       "unions": [
         {
           "id": "u-natalia-christian",
-          "partners": ["natalia-fernandez", "christian-trapaglia"],
+          "partners": [ "natalia-fernandez", "christian-trapaglia" ],
           "status": "divorced",
-          "children": ["agustina-trapaglia"]
+          "children": [ "agustina-trapaglia" ]
         },
         {
           "id": "u-natalia-fabian",
-          "partners": ["natalia-fernandez", "fabian-digiovanni"],
+          "partners": [ "natalia-fernandez", "fabian-digiovanni" ],
           "status": "married",
-          "children": ["lucio-digiovanni"]
+          "children": [ "lucio-digiovanni" ]
         },
         {
           "id": "u-gon-adam",
-          "partners": ["gon-fernandez", "adam-wood"],
+          "partners": [ "gon-fernandez", "adam-wood" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-vanesa-leo",
-          "partners": ["vanesa-seifritz", "leo-goldaracena"],
+          "partners": [ "vanesa-seifritz", "leo-goldaracena" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-sole-gustavo",
-          "partners": ["soledad-fernandez", "gustavo-seoane"],
+          "partners": [ "soledad-fernandez", "gustavo-seoane" ],
           "status": "divorced",
-          "children": ["renata-seoane", "juani-seoane"]
+          "children": [ "renata-seoane", "juani-seoane" ]
         },
         {
           "id": "u-esteban-silvia",
-          "partners": ["esteban-fernandez", "silvia-iencenella"],
+          "partners": [ "esteban-fernandez", "silvia-iencenella" ],
           "status": "divorced",
-          "children": ["valentino-fernandez", "guadalupe-fernandez"]
+          "children": [ "valentino-fernandez", "guadalupe-fernandez" ]
         },
         {
           "id": "u-esteban-vicky",
-          "partners": ["esteban-fernandez", "victoria-taylor"],
+          "partners": [ "esteban-fernandez", "victoria-taylor" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-angie-fernando",
-          "partners": ["fernando-cano", "angeles-fernandez"],
+          "partners": [ "fernando-cano", "angeles-fernandez" ],
           "status": "married",
-          "children": ["cata-cano"]
+          "children": [ "cata-cano" ]
         },
         {
           "id": "u-natalia-jose",
-          "partners": ["natalia-pato", "jose-yad"],
+          "partners": [ "natalia-pato", "jose-yad" ],
           "status": "married",
-          "children": ["paris-yad", "simon-yad", "pedro-yad"]
+          "children": [ "paris-yad", "simon-yad", "pedro-yad" ]
         },
         {
           "id": "u-agustina-gabriel",
-          "partners": ["agustina-pato", "gabriel-kraizer"],
+          "partners": [ "agustina-pato", "gabriel-kraizer" ],
           "status": "married",
-          "children": ["tomas-kraizer", "olivia-kraizer"]
+          "children": [ "tomas-kraizer", "olivia-kraizer" ]
         },
 
         {
           "id": "u-hector-marta",
-          "partners": ["hector-fernandez", "marta-reus"],
+          "partners": [ "hector-fernandez", "marta-reus" ],
           "status": "divorced",
-          "children": ["natalia-fernandez", "gon-fernandez"]
+          "children": [ "natalia-fernandez", "gon-fernandez" ]
         },
         {
           "id": "u-hector-claudia",
-          "partners": ["hector-fernandez", "claudia-scotto"],
+          "partners": [ "hector-fernandez", "claudia-scotto" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-claudia-carlos",
-          "partners": ["claudia-scotto", "carlos-seifritz"],
+          "partners": [ "claudia-scotto", "carlos-seifritz" ],
           "status": "divorced",
-          "children": ["vanesa-seifritz"]
+          "children": [ "vanesa-seifritz" ]
         },
         {
           "id": "u-carlitos-mari",
-          "partners": ["carlos-fernandez", "maria-binetti"],
+          "partners": [ "carlos-fernandez", "maria-binetti" ],
           "status": "married",
           "children": [
             "soledad-fernandez",
@@ -1114,8 +1305,14 @@
           ]
         },
         {
+          "id": "u-raul-amelia",
+          "partners": [ "raul-osvaldo-rodriguez", "amelia-guillin" ],
+          "status": "married",
+          "children": []
+        },
+        {
           "id": "u-elsa-osvaldo",
-          "partners": ["elsa-pato", "osvaldo-valiarino"],
+          "partners": [ "elsa-pato", "osvaldo-valiarino" ],
           "status": "married",
           "children": [
             "guillermo-valiarino",
@@ -1125,81 +1322,93 @@
         },
         {
           "id": "u-gustavo-mabel",
-          "partners": ["gustavo-pato", "mabel-mendoza"],
+          "partners": [ "gustavo-pato", "mabel-mendoza" ],
           "status": "married",
-          "children": ["natalia-pato", "fernando-pato", "agustina-pato"]
+          "children": [ "natalia-pato", "fernando-pato", "agustina-pato" ]
         },
         {
           "id": "u-andres-celina",
-          "partners": ["andres-pato", "celina-garrido"],
+          "partners": [ "andres-pato", "celina-garrido" ],
           "status": "divorced",
-          "children": ["roberto-pato", "maria-pato"]
+          "children": [ "roberto-pato", "maria-pato" ]
         },
         {
           "id": "u-andres-carmen",
-          "partners": ["andres-pato", "carmen-sorrides"],
+          "partners": [ "andres-pato", "carmen-sorrides" ],
           "status": "divorced",
           "children": []
         },
         {
           "id": "u-andres-sonia",
-          "partners": ["andres-pato", "sonia-mistretta"],
+          "partners": [ "andres-pato", "sonia-mistretta" ],
           "status": "married",
-          "children": ["luciana-pato"]
+          "children": [ "luciana-pato" ]
         },
         {
           "id": "u-cecilia-pablo",
-          "partners": ["cecilia-pato", "pablo-paladini"],
+          "partners": [ "cecilia-pato", "pablo-paladini" ],
           "status": "married",
-          "children": ["juan-paladini", "santiago-paladini"]
+          "children": [ "juan-paladini", "santiago-paladini" ]
         },
 
         {
           "id": "u-juan-julia",
-          "partners": ["juan-fernandez", "julia-pato"],
+          "partners": [ "juan-fernandez", "julia-pato" ],
           "status": "married",
-          "children": ["hector-fernandez", "carlos-fernandez"]
+          "children": [ "hector-fernandez", "carlos-fernandez" ]
         },
         {
-          "id": "u-juanc-matildem",
-          "partners": ["juan-c-pato", "matilde-m-gomez"],
+          "id": "u-dolores-juanmaria",
+          "partners": [ "dolores-tome", "juan-maria-rodriguez" ],
           "status": "married",
-          "children": ["eduardo-pato"]
+          "children": [ "juan-alberto-rodriguez", "raul-osvaldo-rodriguez", "hector-julio-rodriguez", "mario-jose-rodriguez", "norma-francisca-rodriguez", "victor-omar-rodriguez" ]
+        },
+        {
+          "id": "u-domingo2-lidia",
+          "partners": [ "domingo-pato-2", "lidia-sandullo" ],
+          "status": "married",
+          "children": [ "gabriel-eduardo-pato" ]
+        },
+        {
+          "id": "u-juanc-matilde",
+          "partners": [ "juan-c-pato", "matilde-m-gomez" ],
+          "status": "married",
+          "children": [ "eduardo-pato" ]
         },
         {
           "id": "u-claudio-rosa",
-          "partners": ["claudio-pato", "rosa-porraz"],
+          "partners": [ "claudio-pato", "rosa-porraz" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-guillermo-elsa",
-          "partners": ["guillermo-pato", "elsa-novo"],
+          "partners": [ "guillermo-pato", "elsa-novo" ],
           "status": "divorced",
-          "children": ["elsa-pato"]
+          "children": [ "elsa-pato" ]
         },
         {
           "id": "u-guillermo-amanda",
-          "partners": ["guillermo-pato", "amanda-"],
+          "partners": [ "guillermo-pato", "amanda-" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-osvaldo-maria",
-          "partners": ["osvaldo-pato", "maria-martinez"],
+          "partners": [ "osvaldo-pato", "maria-martinez" ],
           "status": "divorced",
-          "children": ["gustavo-pato", "andres-pato"]
+          "children": [ "gustavo-pato", "andres-pato" ]
         },
         {
           "id": "u-osvaldo-leonor",
-          "partners": ["osvaldo-pato", "leonor-nonell"],
+          "partners": [ "osvaldo-pato", "leonor-nonell" ],
           "status": "married",
-          "children": ["cecilia-pato"]
+          "children": [ "cecilia-pato" ]
         },
 
         {
           "id": "u-juan-matilde",
-          "partners": ["juan-pato", "matilde-gomez"],
+          "partners": [ "juan-pato", "matilde-gomez" ],
           "status": "married",
           "children": [
             "juan-c-pato",
@@ -1211,7 +1420,7 @@
         },
         {
           "id": "u-domingo-gabriela",
-          "partners": ["domingo-pato", "gabriela-fraga"],
+          "partners": [ "domingo-pato", "gabriela-fraga" ],
           "status": "married",
           "children": [
             "domingo-pato-2",
@@ -1221,51 +1430,60 @@
           ]
         },
         {
-          "id": "u-francisco-carmen",
-          "partners": ["francisco-pato", "carmen-valino"],
+          "id": "u-josefa-jose",
+          "partners": [ "josefa-pato", "jose-tome-fachal" ],
           "status": "married",
-          "children": ["averino-pato", "elvira-pato"]
+          "children": [
+            "dolores-tome"
+          ]
+        },
+        {
+          "id": "u-francisco-carmen",
+          "partners": [ "francisco-pato", "carmen-valino" ],
+          "status": "married",
+          "children": [ "averino-pato", "elvira-pato" ]
         },
         {
           "id": "u-juana-juan",
-          "partners": ["juan-uzal", "juana-pato"],
+          "partners": [ "juan-uzal", "juana-pato" ],
           "status": "married",
-          "children": ["mercedes-uzal", "delfina-uzal"]
+          "children": [ "mercedes-uzal", "delfina-uzal" ]
         },
         {
           "id": "u-antonia-gumersindo",
-          "partners": ["antonia-pato", "gumersindo-garcia"],
+          "partners": [ "antonia-pato", "gumersindo-garcia" ],
           "status": "married",
-          "children": ["mercedes-garcia", "delfina-garcia"]
+          "children": [ "mercedes-garcia", "delfina-garcia" ]
         },
         {
           "id": "u-carmen-jose",
-          "partners": ["carmen-gomez", "jose-maria-alvarez"],
+          "partners": [ "carmen-gomez", "jose-maria-alvarez" ],
           "status": "married",
           "children": []
         },
         {
           "id": "u-maria-francisco",
-          "partners": ["maria-gomez", "francisco-perrino"],
+          "partners": [ "maria-gomez", "francisco-perrino" ],
           "status": "married",
           "children": []
         },
 
         {
           "id": "u-cosme-dolores",
-          "partners": ["cosme-pato", "dolores-rodriguez"],
+          "partners": [ "cosme-pato", "dolores-rodriguez" ],
           "status": "married",
           "children": [
             "domingo-pato",
             "francisco-pato",
             "juana-pato",
             "antonia-pato",
-            "juan-pato"
+            "juan-pato",
+            "josefa-pato"
           ]
         },
         {
           "id": "u-ramon-melchora",
-          "partners": ["ramon-gomez", "melchora-mosquera"],
+          "partners": [ "ramon-gomez", "melchora-mosquera" ],
           "status": "married",
           "children": [
             "matilde-gomez",
@@ -1277,16 +1495,34 @@
           ]
         },
         {
-          "id": "u-mario-gomez",
-          "partners": ["mario-gomez"],
+          "id": "u-salvador-maria",
+          "partners": [ "salvador-pato", "maria-espiñeira" ],
           "status": "married",
-          "children": ["ramon-gomez"]
+          "children": [
+            "maria-pato-0",
+            "gregorio-pato",
+            "cosme-pato"
+          ]
+        },
+        {
+          "id": "u-benito-maria",
+          "partners": [ "benito-rodriguez", "maria-ramos" ],
+          "status": "married",
+          "children": [
+            "dolores-rodriguez"
+          ]
+        },
+        {
+          "id": "u-mario-gomez",
+          "partners": [ "mario-gomez" ],
+          "status": "married",
+          "children": [ "ramon-gomez" ]
         },
         {
           "id": "u-juana-mosquera",
-          "partners": ["juana-mosquera"],
+          "partners": [ "juana-mosquera" ],
           "status": "married",
-          "children": ["melchora-mosquera"]
+          "children": [ "melchora-mosquera" ]
         }
       ]
     }
