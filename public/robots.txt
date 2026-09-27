@@ -1,0 +1,3 @@
+# Private family site: no crawling, no indexing.
+User-agent: *
+Disallow: /

@@ -1,7 +1,9 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import type { FamilyData, FamilyTree } from './types';
 import { validateData, validateTree } from './validate';
-import { TreeView } from './components/TreeView';
+import { TreeView, type TreeViewHandle } from './components/TreeView';
+import { StatsPanel } from './components/StatsPanel';
+import { computeStats } from './stats';
 import { useLayout } from './useLayout';
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/family.json`;
@@ -78,6 +80,39 @@ function TreePage({ uid }: { uid: string }) {
   }, [state]);
 
   const layout = useLayout(state.status === 'ready' ? state.tree : null);
+  const stats = useMemo(
+    () => (state.status === 'ready' && layout ? computeStats(state.tree, layout) : null),
+    [state, layout],
+  );
+
+  const treeRef = useRef<TreeViewHandle>(null);
+  const panelRef = useRef<HTMLElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const [statsOpen, setStatsOpen] = useState(false);
+  const [panelInset, setPanelInset] = useState(0);
+
+  // On wide screens the panel sits beside the tree, so the tree centres in the space left of it.
+  // On phones it covers the tree instead.
+  const isWide = () => window.matchMedia('(min-width: 721px)').matches;
+  useEffect(() => {
+    const measure = () => {
+      const panel = panelRef.current;
+      setPanelInset(statsOpen && panel && isWide() ? panel.offsetWidth + 24 : 0);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [statsOpen]);
+
+  const closeStats = useCallback(() => {
+    setStatsOpen(false);
+    if (panelRef.current?.contains(document.activeElement)) toggleRef.current?.focus();
+  }, []);
+
+  const pickPerson = (id: string) => {
+    if (!isWide()) setStatsOpen(false);
+    treeRef.current?.focusPerson(id);
+  };
 
   if (state.status === 'missing') {
     return (
@@ -101,16 +136,33 @@ function TreePage({ uid }: { uid: string }) {
               : ' '}
           </p>
         </div>
-        <ul className="legend" aria-label="Tipos de línea">
-          <li>
-            <svg width="30" height="10" aria-hidden="true"><path d="M2 5 H28" className="line line--partner" /></svg>
-            Juntos
-          </li>
-          <li>
-            <svg width="30" height="10" aria-hidden="true"><path d="M2 5 H28" className="line line--ended" /></svg>
-            Separados
-          </li>
-        </ul>
+        <div className="app__tools">
+          <ul className="legend" aria-label="Tipos de línea">
+            <li>
+              <svg width="30" height="10" aria-hidden="true"><path d="M2 5 H28" className="line line--partner" /></svg>
+              Juntos
+            </li>
+            <li>
+              <svg width="30" height="10" aria-hidden="true"><path d="M2 5 H28" className="line line--ended" /></svg>
+              Separados
+            </li>
+          </ul>
+          {layout && layout.people.length > 0 && (
+            <button
+              ref={toggleRef}
+              type="button"
+              className={statsOpen ? 'stats-toggle stats-toggle--active' : 'stats-toggle'}
+              aria-expanded={statsOpen}
+              aria-controls="stats-panel"
+              onClick={() => (statsOpen ? closeStats() : setStatsOpen(true))}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M3 15V9 M9 15V3 M15 15V7" />
+              </svg>
+              Estadísticas
+            </button>
+          )}
+        </div>
       </header>
 
       {state.status === 'error' && (
@@ -134,7 +186,12 @@ function TreePage({ uid }: { uid: string }) {
           <p>{state.status === 'loading' ? 'Cargando los datos de la familia…' : 'Armando el árbol…'}</p>
         </div>
       )}
-      {layout && layout.people.length > 0 && <TreeView layout={layout} />}
+      {layout && layout.people.length > 0 && (
+        <div className="workspace">
+          <TreeView ref={treeRef} layout={layout} panelInset={panelInset} />
+          <StatsPanel ref={panelRef} open={statsOpen} stats={stats} onClose={closeStats} onPick={pickPerson} />
+        </div>
+      )}
     </main>
   );
 }

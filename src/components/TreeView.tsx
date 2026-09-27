@@ -1,4 +1,7 @@
-import { Fragment, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import {
+  forwardRef, Fragment, useCallback, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState,
+  type CSSProperties,
+} from 'react';
 import type { Highlight, Layout, UnionGeometry } from '../layout';
 import { CARD_H, CARD_W, descentPath, highlightOf } from '../layout';
 import { fullName } from '../types';
@@ -44,7 +47,19 @@ function highlightPaths(g: UnionGeometry, { line, related }: Highlight) {
   return { strong, soft: soft.join(' '), node };
 }
 
-export function TreeView({ layout }: { layout: Layout }) {
+/** Lets the page (e.g. the stats panel) point the tree at someone. */
+export interface TreeViewHandle {
+  /** Selects the person and glides the view to them. */
+  focusPerson: (id: string) => void;
+}
+
+interface TreeViewProps {
+  layout: Layout;
+  /** Width covered by a side panel on the right; centring and fitting use the space left of it. */
+  panelInset?: number;
+}
+
+export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeView({ layout, panelInset = 0 }, ref) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const statusRef = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<HTMLDivElement>(null);
@@ -111,15 +126,18 @@ export function TreeView({ layout }: { layout: Layout }) {
     (animate: boolean) => {
       const el = viewportRef.current;
       if (!el) return;
-      const w = el.clientWidth;
+      const w = el.clientWidth - panelInset;
       const h = el.clientHeight - bottomInset();
       const k = clamp(Math.min(1, (w - 32) / layout.width, (h - 32) / layout.height), MIN_ZOOM, MAX_ZOOM);
       setView({ k, x: (w - layout.width * k) / 2, y: (h - layout.height * k) / 2 }, animate);
     },
-    [layout, setView, bottomInset],
+    [layout, setView, bottomInset, panelInset],
   );
 
-  useLayoutEffect(() => fit(false), [fit]);
+  // Fit once per layout (on load); later panel changes shouldn't re-fit the view.
+  const fitRef = useRef(fit);
+  fitRef.current = fit;
+  useLayoutEffect(() => fitRef.current(false), [layout]);
 
   // Re-apply the bounds when the viewport changes size (window resize, rotating a phone).
   useEffect(() => {
@@ -150,7 +168,7 @@ export function TreeView({ layout }: { layout: Layout }) {
 
   const zoomCenter = (factor: number) => {
     const el = viewportRef.current;
-    if (el) zoomAt(factor, el.clientWidth / 2, el.clientHeight / 2, true);
+    if (el) zoomAt(factor, (el.clientWidth - panelInset) / 2, el.clientHeight / 2, true);
   };
 
   const centerOn = (id: string) => {
@@ -161,12 +179,19 @@ export function TreeView({ layout }: { layout: Layout }) {
       const k = Math.max(v.k, FOCUS_ZOOM);
       return {
         k,
-        x: el.clientWidth / 2 - (p.x + CARD_W / 2) * k,
+        x: (el.clientWidth - panelInset) / 2 - (p.x + CARD_W / 2) * k,
         // Centred in the area above the floating bars.
         y: (el.clientHeight - bottomInset()) / 2 - (p.y + CARD_H / 2) * k,
       };
     }, true);
   };
+
+  useImperativeHandle(ref, () => ({
+    focusPerson: (id: string) => {
+      setSelectedId(id);
+      centerOn(id);
+    },
+  }));
 
   // The canvas moves only through `view`. If the browser scrolls the viewport anyway (focusing a
   // card in browsers without `overflow: clip`), undo it so positions stay true.
@@ -289,7 +314,11 @@ export function TreeView({ layout }: { layout: Layout }) {
 
   return (
     // Escape clears the selection from anywhere in the tree area, including the status buttons.
-    <div className="tree" onKeyDown={(e) => e.key === 'Escape' && setSelectedId(null)}>
+    <div
+      className="tree"
+      style={{ '--panel-inset': `${panelInset}px` } as CSSProperties}
+      onKeyDown={(e) => e.key === 'Escape' && setSelectedId(null)}
+    >
       <div
         ref={viewportRef}
         className="tree__viewport"
@@ -408,4 +437,4 @@ export function TreeView({ layout }: { layout: Layout }) {
       </div>
     </div>
   );
-}
+});

@@ -19,6 +19,8 @@ export function validateTree(tree: FamilyTree): string[] {
   const problems: string[] = [];
   const ids = new Set<string>();
   for (const p of tree.people) {
+    if (p.gender != null && !['female', 'male', 'other'].includes(p.gender))
+      problems.push(`El género de "${p.id}" tiene que ser "female", "male", "other" o null.`);
     if (p.nationality !== undefined && !Array.isArray(p.nationality))
       problems.push(`La nacionalidad de "${p.id}" tiene que ser una lista, por ejemplo ["argentina"].`);
     if (ids.has(p.id)) problems.push(`El id de persona "${p.id}" está repetido.`);

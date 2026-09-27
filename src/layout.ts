@@ -179,9 +179,9 @@ export interface Highlight {
   /** The selected person with their direct ancestors and descendants. */
   line: Set<string>;
   /**
-   * Close family, in a lighter shade: current partners of anyone on the line and those partners'
-   * children; the selected person's siblings (including half-siblings) and all their descendants;
-   * and the current partner of anyone highlighted.
+   * Close family, in a lighter shade: children that the selected person's or their parents'
+   * current partners had with someone else; the selected person's siblings (including
+   * half-siblings) and all their descendants; and the current partner of anyone highlighted.
    */
   related: Set<string>;
 }
@@ -197,8 +197,9 @@ export function highlightOf(layout: Layout, id: string): Highlight {
     if (!line.has(person)) related.add(person);
   };
 
-  // Children that current partners of people on the line had with someone else.
-  for (const person of line)
+  // Children that the selected person's or their parents' current partners had with someone else
+  // (step-siblings, step-children). Not for grandparents or anyone further along the line.
+  for (const person of [id, ...(layout.parents.get(id) ?? [])])
     for (const partner of currentPartnersOf(person))
       if (!line.has(partner)) (layout.children.get(partner) ?? []).forEach(add);
 

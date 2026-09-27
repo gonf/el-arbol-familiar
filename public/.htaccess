@@ -1,0 +1,5 @@
+# Tell search engines not to index anything served from this site, including the
+# data file and photos (the <meta name="robots"> tag only covers the HTML page).
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+</IfModule>

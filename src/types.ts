@@ -1,3 +1,5 @@
+export type Gender = 'female' | 'male' | 'other';
+
 /** ISO date string, YYYY-MM-DD. Partial dates like "1950" or "1950-03" are allowed. */
 export type ISODate = string;
 
@@ -7,6 +9,8 @@ export interface Person {
   /** Optional middle name(s), shown between first and last name. */
   middleNames?: string;
   lastName: string;
+  /** "female", "male", "other", or null when unknown. */
+  gender?: Gender | null;
   /** Path relative to /public (e.g. "photos/roberto.jpg") or an absolute URL. */
   photo: string | null;
   /** Lowercase Spanish demonyms, e.g. ["argentina", "española"]. A list, since dual nationality is common. Not displayed yet. */
