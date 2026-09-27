@@ -10,7 +10,7 @@ pannable, zoomable tree. The interface is in Argentine Spanish.
 
 Each tree has a `uid`, and a tree is opened with the `arbol` URL variable:
 
-    https://your-server/?arbol=z4lpr6i03p
+    https://your-server/?arbol=pato-fernandez
 
 Without `?arbol=` the site shows a short page saying you need a link to see a tree.
 An unknown uid shows a "not found" page. Nothing is downloaded and no tree names are
@@ -36,7 +36,7 @@ ignore the rules; only a password would.
     {
       "version": 2,
       "trees": [
-        { "uid": "z4lpr6i03p", "name": "Familia Fernández Pato", "people": [...], "unions": [...] }
+        { "uid": "pato-fernandez", "name": "Familia Pato Fernández", "people": [...], "unions": [...] }
       ]
     }
 
@@ -46,17 +46,17 @@ Person and union ids only need to be unique within their own tree.
 
 A **person**:
 
-| field         | type            | notes                                                  |
-|---------------|-----------------|--------------------------------------------------------|
-| `id`          | string          | unique within the tree, referenced by unions           |
-| `firstName`   | string          |                                                        |
-| `middleNames` | string?         | optional                                               |
-| `lastName`    | string          | may be empty                                           |
-| `gender`      | string \| null  | `"female"`, `"male"`, `"other"`, or `null` if unknown  |
-| `photo`       | string \| null  | `"photos/name.webp"` (in `public/`) or a full URL      |
-| `nationality` | string[]        | e.g. `["argentina", "española"]`; not displayed yet   |
-| `birthDate`   | string \| null  | reserved, `YYYY-MM-DD`; not displayed yet              |
-| `deathDate`   | string \| null  | reserved, `YYYY-MM-DD`; not displayed yet              |
+| field         | type           | notes                                                 |
+| ------------- | -------------- | ----------------------------------------------------- |
+| `id`          | string         | unique within the tree, referenced by unions          |
+| `firstName`   | string         |                                                       |
+| `middleNames` | string?        | optional                                              |
+| `lastName`    | string         | may be empty                                          |
+| `gender`      | string \| null | `"female"`, `"male"`, `"other"`, or `null` if unknown |
+| `photo`       | string \| null | `"photos/name.webp"` (in `public/`) or a full URL     |
+| `nationality` | string[]       | e.g. `["argentina", "española"]`; not displayed yet   |
+| `birthDate`   | string \| null | reserved, `YYYY-MM-DD`; not displayed yet             |
+| `deathDate`   | string \| null | reserved, `YYYY-MM-DD`; not displayed yet             |
 
 Photos: square, about 512×512 px, JPEG or WebP. Non-square photos are centre-cropped.
 They load lazily as their card nears the visible part of the tree.
@@ -69,6 +69,7 @@ A **union** connects 1–2 parents with their children:
 `separated` and `divorced` draw a dotted partner line and count as ex-partners.
 
 Rules:
+
 - A person can be in many unions (remarriage, ex with kids, new partner with kids).
 - A child belongs to exactly one union's `children`.
 - Unknown other parent: a union with a single partner.
