@@ -88,8 +88,11 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
     if (!el) return 0;
     const bottom = el.getBoundingClientRect().bottom;
     let covered = 0;
-    for (const bar of [statusRef.current, controlsRef.current])
-      if (bar) covered = Math.max(covered, bottom - bar.getBoundingClientRect().top);
+    for (const bar of [statusRef.current, controlsRef.current]) {
+      const r = bar?.getBoundingClientRect();
+      // A hidden bar (the hint on phones) takes no room.
+      if (r && r.height > 0) covered = Math.max(covered, bottom - r.top);
+    }
     return covered > 0 ? covered + BAR_CLEARANCE : 0;
   }, []);
 
@@ -171,7 +174,7 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
     if (el) zoomAt(factor, (el.clientWidth - panelInset) / 2, el.clientHeight / 2, true);
   };
 
-  const centerOn = (id: string) => {
+  const centerOn = (id: string, animate = true) => {
     const el = viewportRef.current;
     const p = placed.get(id);
     if (!el || !p) return;
@@ -183,7 +186,7 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
         // Centred in the area above the floating bars.
         y: (el.clientHeight - bottomInset()) / 2 - (p.y + CARD_H / 2) * k,
       };
-    }, true);
+    }, animate);
   };
 
   useImperativeHandle(ref, () => ({
@@ -277,9 +280,21 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
   // A click that ends a drag shouldn't change the selection. Keyboard clicks (detail 0) always count.
   const endedDrag = (e: React.MouseEvent) => e.detail > 0 && gesture.current.moved;
 
+  // Refs let the stable click handler use the latest selection and centring logic.
+  const selectedRef = useRef(selectedId);
+  selectedRef.current = selectedId;
+  const centerOnRef = useRef(centerOn);
+  centerOnRef.current = centerOn;
+
+  /** Selecting someone also centres them (instantly); clicking them again just clears. */
   const onSelect = useCallback((id: string, e: React.MouseEvent) => {
     if (endedDrag(e)) return;
-    setSelectedId((current) => (current === id ? null : id));
+    if (selectedRef.current === id) {
+      setSelectedId(null);
+      return;
+    }
+    setSelectedId(id);
+    centerOnRef.current(id, false);
   }, []);
 
   const onViewportClick = (e: React.MouseEvent) => {
@@ -402,7 +417,7 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
         </div>
       </div>
 
-      <div ref={statusRef} className="tree__status glass" role="status">
+      <div ref={statusRef} className={selected ? 'tree__status glass' : 'tree__status tree__status--hint glass'} role="status">
         {selected ? (
           <div key={selected.id} className="status status--selected">
             <Portrait person={selected} className="status__portrait" />
@@ -415,8 +430,21 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
               <span><i className="key key--related" />Familia cercana</span>
             </span>
             <span className="status__actions">
-              <button type="button" className="btn btn--ghost" onClick={() => centerOn(selected.id)}>Centrar</button>
-              <button type="button" className="btn btn--accent" onClick={() => setSelectedId(null)}>Limpiar</button>
+              {/* Text on wide screens; on phones the icon shows and the text stays for screen readers. */}
+              <button type="button" className="btn btn--ghost" onClick={() => centerOn(selected.id)} title="Centrar">
+                <svg className="btn__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                  <circle cx="10" cy="10" r="7" />
+                  <circle cx="10" cy="10" r="3.2" />
+                  <circle cx="10" cy="10" r="0.6" className="btn__icon-dot" />
+                </svg>
+                <span className="btn__text">Centrar</span>
+              </button>
+              <button type="button" className="btn btn--accent" onClick={() => setSelectedId(null)} title="Limpiar">
+                <svg className="btn__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M5.5 5.5 L14.5 14.5 M14.5 5.5 L5.5 14.5" />
+                </svg>
+                <span className="btn__text">Limpiar</span>
+              </button>
             </span>
           </div>
         ) : (

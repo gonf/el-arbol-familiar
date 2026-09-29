@@ -89,7 +89,8 @@ are computed automatically, then a search rearranges families to avoid crossing 
 
 - Drag to pan; wheel, pinch or the − / + buttons to zoom; "Ajustar" fits the whole tree.
   Arrow keys pan and + / − / 0 zoom when the tree has focus.
-- Click (or tap, or Tab + Enter) a person to highlight their **direct line** (ancestors
+- Click (or tap, or Tab + Enter) a person to centre them (zooming in to a readable size if
+  needed) and highlight their **direct line** (ancestors
   and descendants). **Close family** gets a lighter shade: children that the selected person's or their
   parents' current partners had with someone else; the selected person's siblings (including
   half-siblings) and all their descendants; and the current partner of anyone highlighted.
@@ -100,3 +101,6 @@ are computed automatically, then a search rearranges families to avoid crossing 
   centre that person in the tree. Escape or ✕ closes the panel.
 - "Centrar" glides to the selected person. Click them again, click the background, press
   Escape or use "Limpiar" to clear.
+- On phones the layout is compact to leave room for the tree: the "Elegí a una persona…" hint
+  is hidden, the summary line moves into the stats panel, "Estadísticas" becomes an icon next to the legend, the zoom bar is smaller, and
+  "Centrar" and "Limpiar" become a bullseye and a ✕.

@@ -159,7 +159,7 @@ function TreePage({ uid }: { uid: string }) {
               <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
                 <path d="M3 15V9 M9 15V3 M15 15V7" />
               </svg>
-              Estadísticas
+              <span className="stats-toggle__text">Estadísticas</span>
             </button>
           )}
         </div>

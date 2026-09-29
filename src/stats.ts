@@ -12,9 +12,8 @@ export interface RankRow {
 }
 
 export interface Ranking {
+  /** The top five, plus anyone tied with the fifth, so no one is left out of a tie. */
   rows: RankRow[];
-  /** Rows beyond the top five that tie with the fifth one. */
-  moreTied: number;
 }
 
 export type GenderKey = Gender | 'unknown';
@@ -71,10 +70,8 @@ function nameRanking(names: string[]): Ranking {
 
 function rank(rows: RankRow[]): Ranking {
   rows.sort((a, b) => b.value - a.value || a.label.localeCompare(b.label, 'es'));
-  const shown = rows.slice(0, TOP);
-  const last = shown[shown.length - 1];
-  const moreTied = last ? rows.slice(TOP).filter((r) => r.value === last.value).length : 0;
-  return { rows: shown, moreTied };
+  const cutoff = rows[Math.min(TOP, rows.length) - 1]?.value ?? 0;
+  return { rows: rows.filter((r, i) => i < TOP || r.value === cutoff) };
 }
 
 const displayName = (p: Person) => [p.firstName, p.lastName].filter(Boolean).join(' ');

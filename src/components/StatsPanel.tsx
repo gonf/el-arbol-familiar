@@ -42,29 +42,22 @@ function RankingList({ ranking, unit, onPick }: { ranking: Ranking; unit: [strin
   const max = Math.max(1, ...ranking.rows.map((r) => r.value));
   if (!ranking.rows.length) return <p className="stats__empty">Todavía no hay datos para esto.</p>;
   return (
-    <>
-      <ol className="bars">
-        {ranking.rows.map((row: RankRow, i) => (
-          <li key={row.key} className="bars__row" style={{ '--i': i } as CSSProperties}>
-            <span className="bars__label">
-              {row.people ? <PeopleNames people={row.people} onPick={onPick} /> : row.label}
+    <ol className="bars">
+      {ranking.rows.map((row: RankRow, i) => (
+        <li key={row.key} className="bars__row" style={{ '--i': i } as CSSProperties}>
+          <span className="bars__label">
+            {row.people ? <PeopleNames people={row.people} onPick={onPick} /> : row.label}
+          </span>
+          <span className="bars__track">
+            <span className="bars__fill" aria-hidden="true" style={{ '--ratio': row.value / max } as CSSProperties} />
+            <span className="bars__value">
+              {row.value}
+              <span className="visually-hidden"> {row.value === 1 ? unit[0] : unit[1]}</span>
             </span>
-            <span className="bars__track">
-              <span className="bars__fill" aria-hidden="true" style={{ '--ratio': row.value / max } as CSSProperties} />
-              <span className="bars__value">
-                {row.value}
-                <span className="visually-hidden"> {row.value === 1 ? unit[0] : unit[1]}</span>
-              </span>
-            </span>
-          </li>
-        ))}
-      </ol>
-      {ranking.moreTied > 0 && (
-        <p className="stats__note">
-          Y {ranking.moreTied} más con {ranking.rows[ranking.rows.length - 1].value}.
-        </p>
-      )}
-    </>
+          </span>
+        </li>
+      ))}
+    </ol>
   );
 }
 
@@ -217,7 +210,12 @@ export const StatsPanel = forwardRef<HTMLElement, Props>(function StatsPanel({ o
       <header className="stats__header">
         <div>
           <h2 id="stats-title" ref={headingRef} tabIndex={-1} className="stats__title">Estadísticas</h2>
-          {stats && <p className="stats__sub">{stats.total} personas en el árbol</p>}
+          {stats && (
+            <p className="stats__sub">
+              {stats.total} {stats.total === 1 ? 'persona' : 'personas'} en {stats.gender.byGeneration.length}{' '}
+              {stats.gender.byGeneration.length === 1 ? 'generación' : 'generaciones'}
+            </p>
+          )}
         </div>
         <button type="button" className="stats__close" onClick={onClose} aria-label="Cerrar estadísticas">
           <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
