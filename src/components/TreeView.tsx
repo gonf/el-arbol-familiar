@@ -174,7 +174,7 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
     if (el) zoomAt(factor, (el.clientWidth - panelInset) / 2, el.clientHeight / 2, true);
   };
 
-  const centerOn = (id: string, animate = true) => {
+  const centerOn = (id: string) => {
     const el = viewportRef.current;
     const p = placed.get(id);
     if (!el || !p) return;
@@ -186,7 +186,7 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
         // Centred in the area above the floating bars.
         y: (el.clientHeight - bottomInset()) / 2 - (p.y + CARD_H / 2) * k,
       };
-    }, animate);
+    }, true);
   };
 
   useImperativeHandle(ref, () => ({
@@ -280,21 +280,10 @@ export const TreeView = forwardRef<TreeViewHandle, TreeViewProps>(function TreeV
   // A click that ends a drag shouldn't change the selection. Keyboard clicks (detail 0) always count.
   const endedDrag = (e: React.MouseEvent) => e.detail > 0 && gesture.current.moved;
 
-  // Refs let the stable click handler use the latest selection and centring logic.
-  const selectedRef = useRef(selectedId);
-  selectedRef.current = selectedId;
-  const centerOnRef = useRef(centerOn);
-  centerOnRef.current = centerOn;
-
-  /** Selecting someone also centres them (instantly); clicking them again just clears. */
+  /** Clicking a person selects them; clicking them again clears. The view doesn't move. */
   const onSelect = useCallback((id: string, e: React.MouseEvent) => {
     if (endedDrag(e)) return;
-    if (selectedRef.current === id) {
-      setSelectedId(null);
-      return;
-    }
-    setSelectedId(id);
-    centerOnRef.current(id, false);
+    setSelectedId((current) => (current === id ? null : id));
   }, []);
 
   const onViewportClick = (e: React.MouseEvent) => {
