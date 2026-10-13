@@ -6,26 +6,6 @@
       "name": "Familia Pato Fernández",
       "people": [
         {
-          "id": "benito-rodriguez",
-          "firstName": "Benito",
-          "lastName": "Rodriguez",
-          "gender": "male",
-          "photo": null,
-          "nationality": [],
-          "birthDate": null,
-          "deathDate": null
-        },
-        {
-          "id": "maria-ramos",
-          "firstName": "María",
-          "lastName": "Ramos",
-          "gender": "female",
-          "photo": null,
-          "nationality": [],
-          "birthDate": null,
-          "deathDate": null
-        },
-        {
           "id": "salvador-pato",
           "firstName": "Salvador",
           "lastName": "Pato",
@@ -39,6 +19,26 @@
           "id": "maria-espiñeira",
           "firstName": "María",
           "lastName": "Espiñeira",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "benito-rodriguez",
+          "firstName": "Benito",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-ramos",
+          "firstName": "María",
+          "lastName": "Ramos",
           "gender": "female",
           "photo": null,
           "nationality": [],
@@ -220,7 +220,7 @@
         },
         {
           "id": "gumersindo-garcia",
-          "firstName": "Gumersindo",
+          "firstName": "Juan Gumersindo",
           "lastName": "Garcia",
           "gender": "male",
           "photo": null,
@@ -331,7 +331,7 @@
         },
         {
           "id": "lidia-sandullo",
-          "firstName": "Lidia",
+          "firstName": "Lidia Beatriz",
           "lastName": "Sandullo",
           "gender": "female",
           "photo": null,
@@ -361,7 +361,7 @@
         },
         {
           "id": "maria-angelica-pato",
-          "firstName": "Maria Angélica",
+          "firstName": "María Angélica",
           "lastName": "Pato",
           "gender": "female",
           "photo": null,
@@ -411,7 +411,7 @@
         },
         {
           "id": "mercedes-garcia",
-          "firstName": "Mercedes",
+          "firstName": "María Mercedes",
           "lastName": "Garcia",
           "gender": "female",
           "photo": null,
@@ -531,7 +531,7 @@
         },
         {
           "id": "maria-martinez",
-          "firstName": "Maria Luisa",
+          "firstName": "María Luisa",
           "lastName": "Martinez",
           "gender": "female",
           "photo": "photos/maria-martinez.webp",
@@ -576,6 +576,16 @@
           "lastName": "Pato",
           "gender": "male",
           "photo": "photos/eduardo-pato.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "susana-",
+          "firstName": "Susana",
+          "lastName": "",
+          "gender": "female",
+          "photo": null,
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -635,7 +645,7 @@
           "firstName": "Carlos",
           "lastName": "Seifritz",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/carlos-seifritz.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -712,7 +722,7 @@
         },
         {
           "id": "sonia-mistretta",
-          "firstName": "Sonia Adnrea",
+          "firstName": "Sonia Andrea",
           "lastName": "Mistretta",
           "gender": "female",
           "photo": "photos/sonia-mistretta.webp",
@@ -1043,10 +1053,30 @@
         },
         {
           "id": "maria-pato",
-          "firstName": "Maria Alejandra",
+          "firstName": "María Alejandra",
           "lastName": "Pato",
           "gender": "female",
           "photo": "photos/maria-pato.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-stefanazzi",
+          "firstName": "María Florencia",
+          "lastName": "Stefanazzi",
+          "gender": "female",
+          "photo": "photos/maria-stefanazzi.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "agustin-navone",
+          "firstName": "Agustín César",
+          "lastName": "Navone Lier",
+          "gender": "male",
+          "photo": "photos/agustin-navone.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1250,7 +1280,7 @@
         {
           "id": "u-natalia-jose",
           "partners": ["natalia-pato", "jose-yad"],
-          "status": "married",
+          "status": "divorced",
           "children": ["paris-yad", "simon-yad", "pedro-yad"]
         },
         {
@@ -1258,6 +1288,18 @@
           "partners": ["agustina-pato", "gabriel-kraizer"],
           "status": "married",
           "children": ["tomas-kraizer", "olivia-kraizer"]
+        },
+        {
+          "id": "u-roberto-florencia",
+          "partners": ["roberto-pato", "maria-stefanazzi"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-alejandra-agustin",
+          "partners": ["maria-pato", "agustin-navone"],
+          "status": "married",
+          "children": []
         },
 
         {
@@ -1295,6 +1337,12 @@
           "children": []
         },
         {
+          "id": "u-eduardo-susana",
+          "partners": ["eduardo-pato", "susana-"],
+          "status": "married",
+          "children": []
+        },
+        {
           "id": "u-elsa-osvaldo",
           "partners": ["elsa-pato", "osvaldo-valiarino"],
           "status": "married",
@@ -1325,7 +1373,7 @@
         {
           "id": "u-andres-sonia",
           "partners": ["andres-pato", "sonia-mistretta"],
-          "status": "married",
+          "status": "divorced",
           "children": ["luciana-pato"]
         },
         {
@@ -1514,26 +1562,6 @@
       "name": "Familia Fernández Reus",
       "people": [
         {
-          "id": "benito-rodriguez",
-          "firstName": "Benito",
-          "lastName": "Rodriguez",
-          "gender": "male",
-          "photo": null,
-          "nationality": [],
-          "birthDate": null,
-          "deathDate": null
-        },
-        {
-          "id": "maria-ramos",
-          "firstName": "María",
-          "lastName": "Ramos",
-          "gender": "female",
-          "photo": null,
-          "nationality": [],
-          "birthDate": null,
-          "deathDate": null
-        },
-        {
           "id": "salvador-pato",
           "firstName": "Salvador",
           "lastName": "Pato",
@@ -1547,6 +1575,26 @@
           "id": "maria-espiñeira",
           "firstName": "María",
           "lastName": "Espiñeira",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "benito-rodriguez",
+          "firstName": "Benito",
+          "lastName": "Rodriguez",
+          "gender": "male",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-ramos",
+          "firstName": "María",
+          "lastName": "Ramos",
           "gender": "female",
           "photo": null,
           "nationality": [],
@@ -1728,7 +1776,7 @@
         },
         {
           "id": "gumersindo-garcia",
-          "firstName": "Gumersindo",
+          "firstName": "Juan Gumersindo",
           "lastName": "Garcia",
           "gender": "male",
           "photo": null,
@@ -1879,7 +1927,7 @@
         },
         {
           "id": "lidia-sandullo",
-          "firstName": "Lidia",
+          "firstName": "Lidia Beatriz",
           "lastName": "Sandullo",
           "gender": "female",
           "photo": null,
@@ -1909,7 +1957,7 @@
         },
         {
           "id": "maria-angelica-pato",
-          "firstName": "Maria Angélica",
+          "firstName": "María Angélica",
           "lastName": "Pato",
           "gender": "female",
           "photo": null,
@@ -1959,7 +2007,7 @@
         },
         {
           "id": "mercedes-garcia",
-          "firstName": "Mercedes",
+          "firstName": "María Mercedes",
           "lastName": "Garcia",
           "gender": "female",
           "photo": null,
@@ -2079,7 +2127,7 @@
         },
         {
           "id": "maria-martinez",
-          "firstName": "Maria Luisa",
+          "firstName": "María Luisa",
           "lastName": "Martinez",
           "gender": "female",
           "photo": "photos/maria-martinez.webp",
@@ -2199,6 +2247,16 @@
           "deathDate": null
         },
         {
+          "id": "susana-",
+          "firstName": "Susana",
+          "lastName": "",
+          "gender": "female",
+          "photo": null,
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
           "id": "elsa-pato",
           "firstName": "Elsa Cristina",
           "lastName": "Pato",
@@ -2313,7 +2371,7 @@
           "firstName": "Carlos",
           "lastName": "Seifritz",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/carlos-seifritz.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2861,10 +2919,30 @@
         },
         {
           "id": "maria-pato",
-          "firstName": "Maria Alejandra",
+          "firstName": "María Alejandra",
           "lastName": "Pato",
           "gender": "female",
           "photo": "photos/maria-pato.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "maria-stefanazzi",
+          "firstName": "María Florencia",
+          "lastName": "Stefanazzi",
+          "gender": "female",
+          "photo": "photos/maria-stefanazzi.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "agustin-navone",
+          "firstName": "Agustín César",
+          "lastName": "Navone Lier",
+          "gender": "male",
+          "photo": "photos/agustin-navone.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3230,7 +3308,7 @@
         {
           "id": "u-natalia-jose",
           "partners": ["natalia-pato", "jose-yad"],
-          "status": "married",
+          "status": "divorced",
           "children": ["paris-yad", "simon-yad", "pedro-yad"]
         },
         {
@@ -3238,6 +3316,18 @@
           "partners": ["agustina-pato", "gabriel-kraizer"],
           "status": "married",
           "children": ["tomas-kraizer", "olivia-kraizer"]
+        },
+        {
+          "id": "u-roberto-florencia",
+          "partners": ["roberto-pato", "maria-stefanazzi"],
+          "status": "married",
+          "children": []
+        },
+        {
+          "id": "u-alejandra-agustin",
+          "partners": ["maria-pato", "agustin-navone"],
+          "status": "married",
+          "children": []
         },
 
         {
@@ -3293,6 +3383,12 @@
           "children": []
         },
         {
+          "id": "u-eduardo-susana",
+          "partners": ["eduardo-pato", "susana-"],
+          "status": "married",
+          "children": []
+        },
+        {
           "id": "u-elsa-osvaldo",
           "partners": ["elsa-pato", "osvaldo-valiarino"],
           "status": "married",
@@ -3323,7 +3419,7 @@
         {
           "id": "u-andres-sonia",
           "partners": ["andres-pato", "sonia-mistretta"],
-          "status": "married",
+          "status": "divorced",
           "children": ["luciana-pato"]
         },
         {
