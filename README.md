@@ -95,7 +95,7 @@ are computed automatically, then a search rearranges families to avoid crossing 
   half-siblings) and all their descendants; and the current partner of anyone highlighted.
 - "Estadísticas" (top right) opens a side panel with: the gender split overall and per
   generation; the most common first surnames and first names (accents and case ignored, so
-  "Maria" and "María" count together); and who has the most children and descendants. People who share the
+  "Maria" and "María" count together; a name or surname written as "???" is left out); and who has the most children and descendants. People who share the
   same result, like a couple and their children, share a row. Click any name to select and
   centre that person in the tree. Escape or ✕ closes the panel.
 - "Centrar" glides to the selected person. Click them again, click the background, press

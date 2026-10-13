@@ -133,7 +133,7 @@
           "firstName": "Domingo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/domingo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -173,7 +173,7 @@
           "firstName": "Francisco",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/francisco-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -193,7 +193,7 @@
           "firstName": "Juana",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/juana-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -213,7 +213,7 @@
           "firstName": "Antonia",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/antonia-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -263,7 +263,7 @@
           "firstName": "Ramón",
           "lastName": "Gomez",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/ramon-gomez2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -300,10 +300,10 @@
         },
         {
           "id": "maria-gomez",
-          "firstName": "María",
+          "firstName": "María Andrea",
           "lastName": "Gomez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-gomez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -434,7 +434,7 @@
           "firstName": "Juan Carlos",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/juancarlos-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -444,7 +444,7 @@
           "firstName": "Mercedes",
           "lastName": "Gomez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/mercedes-gomez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -454,7 +454,7 @@
           "firstName": "Guillermo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/guillermo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -464,17 +464,17 @@
           "firstName": "Elsa",
           "lastName": "Novo",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/elsa-novo.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "amanda-",
-          "firstName": "Maria Amanda",
+          "firstName": "María Amanda",
           "lastName": "",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/amanda-.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -484,7 +484,7 @@
           "firstName": "Claudio",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/claudio-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -494,7 +494,7 @@
           "firstName": "Rosa",
           "lastName": "Porraz",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/rosa-porraz.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -524,27 +524,27 @@
           "firstName": "Osvaldo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/osvaldo-pato2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "maria-martinez",
-          "firstName": "Maria L.",
+          "firstName": "Maria Luisa",
           "lastName": "Martinez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-martinez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "leonor-nonell",
-          "firstName": "Leonor",
+          "firstName": "Leonor Gioconda",
           "lastName": "Nonell",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/leonor-nonell2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -575,7 +575,7 @@
           "firstName": "Eduardo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/eduardo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -585,7 +585,7 @@
           "firstName": "Elsa Cristina",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/elsa-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -615,7 +615,7 @@
           "firstName": "Marta Teresa",
           "lastName": "Reus",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/marta-reus.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -642,7 +642,7 @@
         },
         {
           "id": "carlos-fernandez",
-          "firstName": "Carlos",
+          "firstName": "Juan Carlos",
           "lastName": "Fernández",
           "gender": "male",
           "photo": "photos/carlos-fernandez.webp",
@@ -665,7 +665,7 @@
           "firstName": "Gustavo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/gustavo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -675,17 +675,17 @@
           "firstName": "Mabel",
           "lastName": "Mendoza",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/mabel-mendoza.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "andres-pato",
-          "firstName": "Andres",
+          "firstName": "Rubén Andrés",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "/photos/andres-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -695,37 +695,37 @@
           "firstName": "Celina",
           "lastName": "Garrido",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/celina-garrido.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
-          "id": "carmen-sorrides",
-          "firstName": "Carmen",
-          "lastName": "Sorrides",
+          "id": "carmen-sorribes",
+          "firstName": "Carmen Verónica",
+          "lastName": "Sorribes",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/carmen-sorribes.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "sonia-mistretta",
-          "firstName": "Sonia",
+          "firstName": "Sonia Adnrea",
           "lastName": "Mistretta",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/sonia-mistretta.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "cecilia-pato",
-          "firstName": "Cecilia M.",
+          "firstName": "Cecilia Matilde",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/cecilia-pato2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -735,7 +735,7 @@
           "firstName": "Pablo",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/pablo-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -886,7 +886,7 @@
           "firstName": "Christian Guillermo",
           "lastName": "Trapaglia",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/christian-trapaglia_b.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -953,7 +953,7 @@
         },
         {
           "id": "fernando-cano",
-          "firstName": "Fernando",
+          "firstName": "Fernando Javier",
           "lastName": "Cano",
           "gender": "male",
           "photo": "photos/fernando-cano.webp",
@@ -966,37 +966,27 @@
           "firstName": "Silvia Mabel",
           "lastName": "Iencenella",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/silvia-iencenella.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "gustavo-seoane",
-          "firstName": "Gustavo",
+          "firstName": "Gustavo Javier",
           "lastName": "Seoane",
           "gender": "male",
-          "photo": null,
-          "nationality": [],
-          "birthDate": null,
-          "deathDate": null
-        },
-        {
-          "id": "victoria-taylor",
-          "firstName": "Victoria",
-          "lastName": "Taylor",
-          "gender": "female",
-          "photo": "photos/victoria-taylor.webp",
+          "photo": "/photos/gustavo-seoane.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "natalia-pato",
-          "firstName": "Natalia",
+          "firstName": "María Natalia",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/natalia-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1006,7 +996,7 @@
           "firstName": "Jose",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/jose-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1016,17 +1006,17 @@
           "firstName": "Fernando",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/fernando-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "agustina-pato",
-          "firstName": "Agustina",
+          "firstName": "María Agustina",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/agustina-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1036,27 +1026,27 @@
           "firstName": "Gabriel",
           "lastName": "Kraizer",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/gabriel-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "roberto-pato",
-          "firstName": "Roberto O.",
+          "firstName": "Roberto Osvaldo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/roberto-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "maria-pato",
-          "firstName": "Maria A.",
+          "firstName": "Maria Alejandra",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1064,19 +1054,19 @@
         {
           "id": "luciana-pato",
           "firstName": "Luciana",
-          "lastName": "Pato",
+          "lastName": "Pato Mistretta",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/luciana-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "juan-paladini",
-          "firstName": "Juan I.",
+          "firstName": "Juan Ignacio",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/juan-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1086,7 +1076,7 @@
           "firstName": "Santiago",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/santiago-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1105,7 +1095,7 @@
         {
           "id": "lucio-digiovanni",
           "firstName": "Lucio",
-          "lastName": "Di Giovanni Mazzetti",
+          "lastName": "Di Giovanni",
           "gender": "male",
           "photo": "photos/lucio-digiovanni.webp",
           "nationality": [],
@@ -1164,30 +1154,30 @@
         },
         {
           "id": "paris-yad",
-          "firstName": "Paris M.",
+          "firstName": "Paris María",
           "lastName": "Yad",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/paris-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "simon-yad",
-          "firstName": "Simón J.",
+          "firstName": "Simón José",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/simon-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "pedro-yad",
-          "firstName": "Pedro B.",
+          "firstName": "Pedro Benito",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/pedro-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1197,7 +1187,7 @@
           "firstName": "Tomás",
           "lastName": "Kraizer",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/tomas-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1207,7 +1197,7 @@
           "firstName": "Olivia",
           "lastName": "Kraizer",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/olivia-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1250,12 +1240,6 @@
           "partners": ["esteban-fernandez", "silvia-iencenella"],
           "status": "divorced",
           "children": ["valentino-fernandez", "guadalupe-fernandez"]
-        },
-        {
-          "id": "u-esteban-vicky",
-          "partners": ["esteban-fernandez", "victoria-taylor"],
-          "status": "married",
-          "children": []
         },
         {
           "id": "u-angie-fernando",
@@ -1334,7 +1318,7 @@
         },
         {
           "id": "u-andres-carmen",
-          "partners": ["andres-pato", "carmen-sorrides"],
+          "partners": ["andres-pato", "carmen-sorribes"],
           "status": "divorced",
           "children": []
         },
@@ -1657,7 +1641,7 @@
           "firstName": "Domingo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/domingo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1697,7 +1681,7 @@
           "firstName": "Francisco",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/francisco-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1717,7 +1701,7 @@
           "firstName": "Juana",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/juana-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1737,7 +1721,7 @@
           "firstName": "Antonia",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/antonia-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1787,7 +1771,7 @@
           "firstName": "Ramón",
           "lastName": "Gomez",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/ramon-gomez2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1824,10 +1808,10 @@
         },
         {
           "id": "maria-gomez",
-          "firstName": "María",
+          "firstName": "María Andrea",
           "lastName": "Gomez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-gomez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -1998,7 +1982,7 @@
           "firstName": "Juan Carlos",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/juancarlos-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2008,7 +1992,7 @@
           "firstName": "Mercedes",
           "lastName": "Gomez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/mercedes-gomez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2018,7 +2002,7 @@
           "firstName": "Guillermo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/guillermo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2028,17 +2012,17 @@
           "firstName": "Elsa",
           "lastName": "Novo",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/elsa-novo.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "amanda-",
-          "firstName": "Maria Amanda",
-          "lastName": "",
+          "firstName": "María Amanda",
+          "lastName": "???",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/amanda-.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2048,7 +2032,7 @@
           "firstName": "Claudio",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/claudio-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2058,7 +2042,7 @@
           "firstName": "Rosa",
           "lastName": "Porraz",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/rosa-porraz.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2088,27 +2072,27 @@
           "firstName": "Osvaldo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/osvaldo-pato2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "maria-martinez",
-          "firstName": "Maria L.",
+          "firstName": "Maria Luisa",
           "lastName": "Martinez",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-martinez.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "leonor-nonell",
-          "firstName": "Leonor",
+          "firstName": "Leonor Gioconda",
           "lastName": "Nonell",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/leonor-nonell2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2209,7 +2193,7 @@
           "firstName": "Eduardo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/eduardo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2219,7 +2203,7 @@
           "firstName": "Elsa Cristina",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/elsa-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2336,7 +2320,7 @@
         },
         {
           "id": "carlos-fernandez",
-          "firstName": "Carlos",
+          "firstName": "Juan Carlos",
           "lastName": "Fernández",
           "gender": "male",
           "photo": "photos/carlos-fernandez.webp",
@@ -2359,7 +2343,7 @@
           "firstName": "Gustavo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/gustavo-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2369,17 +2353,17 @@
           "firstName": "Mabel",
           "lastName": "Mendoza",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/mabel-mendoza.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "andres-pato",
-          "firstName": "Andres",
+          "firstName": "Rubén Andrés",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/andres-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2389,37 +2373,37 @@
           "firstName": "Celina",
           "lastName": "Garrido",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/celina-garrido.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
-          "id": "carmen-sorrides",
-          "firstName": "Carmen",
-          "lastName": "Sorrides",
+          "id": "carmen-sorribes",
+          "firstName": "Carmen Verónica",
+          "lastName": "Sorribes",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/carmen-sorribes.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "sonia-mistretta",
-          "firstName": "Sonia",
+          "firstName": "Sonia Andrea",
           "lastName": "Mistretta",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/sonia-mistretta.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "cecilia-pato",
-          "firstName": "Cecilia M.",
+          "firstName": "Cecilia Matilde",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/cecilia-pato2.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2429,7 +2413,7 @@
           "firstName": "Pablo",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/pablo-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2670,7 +2654,7 @@
           "firstName": "Patricia",
           "lastName": "Reus",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/patricia-reus.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2777,7 +2761,7 @@
         },
         {
           "id": "fernando-cano",
-          "firstName": "Fernando",
+          "firstName": "Fernando Javier",
           "lastName": "Cano",
           "gender": "male",
           "photo": "photos/fernando-cano.webp",
@@ -2790,24 +2774,24 @@
           "firstName": "Silvia Mabel",
           "lastName": "Iencenella",
           "gender": "female",
-          "photo": null,
+          "photo": "/photos/silvia-iencenella.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "gustavo-seoane",
-          "firstName": "Gustavo",
+          "firstName": "Gustavo Javier",
           "lastName": "Seoane",
           "gender": "male",
-          "photo": null,
+          "photo": "/photos/gustavo-seoane.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "victoria-taylor",
-          "firstName": "Victoria",
+          "firstName": "Victoria Vanessa",
           "lastName": "Taylor",
           "gender": "female",
           "photo": "photos/victoria-taylor.webp",
@@ -2817,10 +2801,10 @@
         },
         {
           "id": "natalia-pato",
-          "firstName": "Natalia",
+          "firstName": "María Natalia",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/natalia-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2830,7 +2814,7 @@
           "firstName": "Jose",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/jose-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2840,17 +2824,17 @@
           "firstName": "Fernando",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/fernando-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "agustina-pato",
-          "firstName": "Agustina",
+          "firstName": "María Agustina",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/agustina-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2860,27 +2844,27 @@
           "firstName": "Gabriel",
           "lastName": "Kraizer",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/gabriel-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "roberto-pato",
-          "firstName": "Roberto O.",
+          "firstName": "Roberto Osvaldo",
           "lastName": "Pato",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/roberto-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "maria-pato",
-          "firstName": "Maria A.",
+          "firstName": "Maria Alejandra",
           "lastName": "Pato",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/maria-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2888,19 +2872,19 @@
         {
           "id": "luciana-pato",
           "firstName": "Luciana",
-          "lastName": "Pato",
+          "lastName": "Pato Mistretta",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/luciana-pato.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "juan-paladini",
-          "firstName": "Juan I.",
+          "firstName": "Juan Ignacio",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/juan-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2910,7 +2894,7 @@
           "firstName": "Santiago",
           "lastName": "Paladini",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/santiago-paladini.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -2929,7 +2913,7 @@
         {
           "id": "lucio-digiovanni",
           "firstName": "Lucio",
-          "lastName": "Di Giovanni Mazzetti",
+          "lastName": "Di Giovanni",
           "gender": "male",
           "photo": "photos/lucio-digiovanni.webp",
           "nationality": [],
@@ -3031,7 +3015,7 @@
           "firstName": "Matías",
           "lastName": "Magno",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/matias-magno.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3041,7 +3025,17 @@
           "firstName": "Yanina",
           "lastName": "Magno",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/yanina-magno.webp",
+          "nationality": [],
+          "birthDate": null,
+          "deathDate": null
+        },
+        {
+          "id": "aldi-magno",
+          "firstName": "Aldi",
+          "lastName": "Magno",
+          "gender": "female",
+          "photo": "photos/aldi-magno.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3098,30 +3092,30 @@
         },
         {
           "id": "paris-yad",
-          "firstName": "Paris M.",
+          "firstName": "Paris María",
           "lastName": "Yad",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/paris-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "simon-yad",
-          "firstName": "Simón J.",
+          "firstName": "Simón José",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "/photos/simon-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
         },
         {
           "id": "pedro-yad",
-          "firstName": "Pedro B.",
+          "firstName": "Pedro Benito",
           "lastName": "Yad",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/pedro-yad.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3131,7 +3125,7 @@
           "firstName": "Tomás",
           "lastName": "Kraizer",
           "gender": "male",
-          "photo": null,
+          "photo": "photos/tomas-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3141,7 +3135,7 @@
           "firstName": "Olivia",
           "lastName": "Kraizer",
           "gender": "female",
-          "photo": null,
+          "photo": "photos/olivia-kraizer.webp",
           "nationality": [],
           "birthDate": null,
           "deathDate": null
@@ -3189,7 +3183,7 @@
           "id": "u-pato-miguelero",
           "partners": ["patricia-reus", "miguel-magno"],
           "status": "married",
-          "children": ["yanina-magno", "matias-magno"]
+          "children": ["yanina-magno", "matias-magno", "aldi-magno"]
         },
         {
           "id": "u-fernanda-ricardo",
@@ -3322,7 +3316,7 @@
         },
         {
           "id": "u-andres-carmen",
-          "partners": ["andres-pato", "carmen-sorrides"],
+          "partners": ["andres-pato", "carmen-sorribes"],
           "status": "divorced",
           "children": []
         },

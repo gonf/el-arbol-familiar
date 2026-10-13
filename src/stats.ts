@@ -35,11 +35,15 @@ const accents = (s: string) => s.normalize('NFD').length - s.length;
 /** Words that belong to the surname that follows them ("Di Giovanni", "de la Torre"). */
 const PARTICLES = new Set(['de', 'del', 'la', 'las', 'los', 'di', 'da', 'dos', 'du', 'van', 'von', 'le']);
 
+/** "???" (any run of question marks) marks a name nobody knows yet; it never counts in the rankings. */
+const isUnknown = (word: string) => /^\?+$/.test(word);
+
 /** First surname of a (possibly double) Spanish surname: "Seoane Fernández" → "Seoane". */
 export function firstSurname(lastName: string): string {
   const words = lastName.trim().split(/\s+/).filter(Boolean);
   const out: string[] = [];
   for (const w of words) {
+    if (isUnknown(w)) return '';
     out.push(w);
     if (!PARTICLES.has(fold(w))) break;
   }
@@ -48,7 +52,8 @@ export function firstSurname(lastName: string): string {
 
 /** First given name, skipping initials: "María de los Angeles" → "María", "Juan I." → "Juan". */
 export function firstGivenName(firstName: string): string {
-  return firstName.trim().split(/\s+/).find((w) => w && !w.endsWith('.')) ?? '';
+  const name = firstName.trim().split(/\s+/).find((w) => w && !w.endsWith('.')) ?? '';
+  return isUnknown(name) ? '' : name;
 }
 
 /** Counts names by their accent-free form, labelled with the most used spelling (accented on a tie). */
