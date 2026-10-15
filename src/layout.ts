@@ -10,9 +10,12 @@ const PAD = 72;
 const PARTNER_LINE_Y = 80; // offset from card top, level with the middle of the photo
 const BRIDGE_RISE = 22; // how far above the cards a non-adjacent partner line runs
 const CORNER = 14; // radius of the rounded turns in connectors
+const DROP_CLEARANCE = 8; // min space between a line coming down between partners and their cards
 const BUS_SPACING = 12; // vertical distance between stacked children lines in one gap
 const BUS_CLEARANCE = 16; // min horizontal space between children lines sharing a lane
 const ITERATIONS = 8;
+const MIDDLE_WEIGHT = 4; // how much more a straight line to an only or middle child counts
+const PIN_WEIGHT = 100; // how much more a straight line to an only or middle child counts
 const SEARCH_PASSES = 6;
 
 export interface PlacedPerson {
@@ -344,54 +347,137 @@ export function computeLayout(tree: FamilyTree, searchPasses = SEARCH_PASSES): L
   const topOf = (id: string) => PAD + gen.get(id)! * (CARD_H + ROW_GAP);
 
   /**
-   * Places a row without overlaps. With `reorder`, clusters are sorted by where they want to be;
-   * otherwise the current order is kept. Left- and right-biased sweeps are averaged for balance.
+   * Where a union's line comes down to its children, with its partners left to right.
+   * `slack` is how far the line may slide sideways (between the partners, or under a single
+   * parent's card) to come straight down to an only or middle child.
    */
-  const placeRow = (row: Cluster[], desired: Map<Cluster, number>, reorder: boolean) => {
-    const list = reorder ? [...row].sort((a, b) => desired.get(a)! - desired.get(b)!) : row;
-    const ltr: number[] = [];
-    let cursor = -Infinity;
-    for (const c of list) {
-      const left = Math.max(desired.get(c)! - clusterWidth(c) / 2, cursor);
-      ltr.push(left);
-      cursor = left + clusterWidth(c) + CLUSTER_GAP;
+  const dropOf = (union: Union) => {
+    if (union.partners.length === 1) {
+      const a = union.partners[0];
+      return { a, b: null, hub: null, dropX: centerX(a), slack: CARD_W / 2 - 2 * CORNER };
     }
-    const rtl: number[] = new Array(list.length);
-    cursor = Infinity;
-    for (let i = list.length - 1; i >= 0; i--) {
-      const c = list[i];
-      const right = Math.min(desired.get(c)! + clusterWidth(c) / 2, cursor);
-      rtl[i] = right - clusterWidth(c);
-      cursor = rtl[i] - CLUSTER_GAP;
+    const [a, b] = centerX(union.partners[0]) <= centerX(union.partners[1])
+      ? union.partners
+      : [union.partners[1], union.partners[0]];
+    const adjacent =
+      clusterOf.get(a) === clusterOf.get(b) && Math.abs(memberIndex.get(a)! - memberIndex.get(b)!) === 1;
+    if (adjacent || gen.get(a) !== gen.get(b)) {
+      const slack = adjacent ? PARTNER_GAP / 2 - DROP_CLEARANCE : 0;
+      return { a, b, hub: null, dropX: (centerX(a) + centerX(b)) / 2, slack };
     }
-    list.forEach((c, i) => (c.left = (ltr[i] + rtl[i]) / 2));
+    // Someone sits between these partners: the line bridges over the cards instead of behind them,
+    // and drops to the children through the gap beside the outer partner.
+    const degree = (id: string) => partnerAdj.get(id)?.length ?? 0;
+    const hub = degree(a) >= degree(b) ? a : b;
+    const other = hub === a ? b : a;
+    const inward = centerX(hub) > centerX(other) ? 1 : -1;
+    const dropX = centerX(other) + (inward * (CARD_W + PARTNER_GAP)) / 2;
+    return { a, b, hub, dropX, slack: PARTNER_GAP / 2 - DROP_CLEARANCE };
   };
 
-  const pullFromParents = (row: Cluster[], reorder: boolean) => {
-    const desired = new Map<Cluster, number>();
-    for (const c of row) {
-      const shifts = c.members
-        .filter((id) => parentUnion.has(id))
-        .map((id) => unionMid(parentUnion.get(id)!) - centerX(id));
-      desired.set(c, clusterCenter(c) + (shifts.length ? avg(shifts) : 0));
+  const kidGroups = new Map(unions.map((u) => [u, [...new Set(u.children.map((id) => clusterOf.get(id)!))]]));
+  const siblingOffsets = (u: Union) => {
+    const group = kidGroups.get(u)!.sort((a, b) => a.left - b.left);
+    const packed = new Map<Cluster, number>();
+    let cursor = 0;
+    for (const c of group) {
+      packed.set(c, cursor);
+      cursor += clusterWidth(c) + CLUSTER_GAP;
     }
-    placeRow(row, desired, reorder);
+    const xs = u.children
+      .map((id) => packed.get(clusterOf.get(id)!)! + memberIndex.get(id)! * (CARD_W + PARTNER_GAP) + CARD_W / 2)
+      .sort((a, b) => a - b);
+    const anchor = (xs[(xs.length - 1) >> 1] + xs[xs.length >> 1]) / 2;
+    const offsets = new Map<Cluster, number>();
+    for (const c of group) offsets.set(c, packed.get(c)! + clusterWidth(c) / 2 - anchor);
+    return offsets;
   };
 
-  const pullFromChildren = (row: Cluster[], reorder: boolean) => {
-    const desired = new Map<Cluster, number>();
+  /**
+   * Per union: the child whose line should come straight down from the parents (the only or
+   * middle one), and the sibling offsets. Both only depend on the order within rows, so they're
+   * refreshed when that might have changed.
+   */
+  const middles = new Map<Union, string | null>();
+  const offsets = new Map<Union, Map<Cluster, number>>();
+  const refreshOrder = () => {
+    for (const u of unions) {
+      const n = u.children.length;
+      middles.set(u, n % 2 ? [...u.children].sort((a, b) => centerX(a) - centerX(b))[(n - 1) / 2] : null);
+      if (n) offsets.set(u, siblingOffsets(u));
+    }
+  };
+  const middleChild = (u: Union) => middles.get(u) ?? null;
+
+  /**
+   * Where each child's cluster sits relative to the parents' drop line when the siblings, side by
+   * side in their current order, are centred under it: the middle child straight below for an
+   * odd number, the two middle ones either side of it for an even number.
+   */
+  /**
+   * Moves one row to where its families want it: each cluster sits in its slot under its parents,
+   * and above the centre of its own children. That's a least-squares problem per row with
+   * order and spacing constraints, solved exactly by pooling adjacent clusters that collide.
+   * With `reorder`, clusters are first sorted by where they want to be. With `pin`, a line to an
+   * only or middle child coming straight down outweighs everything else.
+   */
+  const settleRow = (row: Cluster[], reorder: boolean, pin = false) => {
+    const sum = new Map<Cluster, number>();
+    const weight = new Map<Cluster, number>();
+    const want = (c: Cluster, center: number, w = 1) => {
+      sum.set(c, (sum.get(c) ?? 0) + center * w);
+      weight.set(c, (weight.get(c) ?? 0) + w);
+    };
+    // Nothing moves until the row is solved, so drop lines can be shared within one call.
+    const dropXOf = new Map<Union, number>();
+    const dropX = (u: Union) => {
+      if (!dropXOf.has(u)) dropXOf.set(u, dropOf(u).dropX);
+      return dropXOf.get(u)!;
+    };
     for (const c of row) {
-      const shifts: number[] = [];
       const seen = new Set<Union>();
-      for (const id of c.members)
+      for (const id of c.members) {
+        const pu = parentUnion.get(id);
+        if (pu && middleChild(pu) === id)
+          want(c, dropX(pu) + clusterCenter(c) - centerX(id), pin ? PIN_WEIGHT : MIDDLE_WEIGHT);
+        else if (pu) want(c, dropX(pu) + offsets.get(pu)!.get(c)!);
         for (const u of unionsOf.get(id) ?? []) {
           if (seen.has(u) || !u.children.length) continue;
           seen.add(u);
-          shifts.push(avg(u.children.map(centerX)) - unionMid(u));
+          const fromDrop = clusterCenter(c) - dropX(u);
+          for (const [k, off] of offsets.get(u)!) want(c, clusterCenter(k) - off + fromDrop);
+          const m = middleChild(u);
+          if (m) want(c, centerX(m) + fromDrop, MIDDLE_WEIGHT);
         }
-      desired.set(c, clusterCenter(c) + (shifts.length ? avg(shifts) : 0));
+      }
     }
-    placeRow(row, desired, reorder);
+    const desired = (c: Cluster) => (weight.has(c) ? sum.get(c)! / weight.get(c)! : clusterCenter(c));
+    const list = reorder ? [...row].sort((a, b) => desired(a) - desired(b)) : row;
+
+    // Shift each cluster by the room the ones before it take up, so the constraints become
+    // "never left of the previous one"; then merge neighbours that break it into one block.
+    const blocks: { start: number; w: number; mean: number }[] = [];
+    let shift = 0;
+    const shifts = list.map((c) => {
+      const s = shift;
+      shift += clusterWidth(c) + CLUSTER_GAP;
+      return s;
+    });
+    list.forEach((c, i) => {
+      const w = weight.get(c) ?? 1e-3;
+      let block = { start: i, w, mean: desired(c) - clusterWidth(c) / 2 - shifts[i] };
+      while (blocks.length && blocks[blocks.length - 1].mean >= block.mean) {
+        const prev = blocks.pop()!;
+        const total = prev.w + block.w;
+        block = { start: prev.start, w: total, mean: (prev.mean * prev.w + block.mean * block.w) / total };
+      }
+      blocks.push(block);
+    });
+    blocks.forEach((b, j) => {
+      const end = j + 1 < blocks.length ? blocks[j + 1].start : list.length;
+      for (let i = b.start; i < end; i++) list[i].left = b.mean + shifts[i];
+    });
+    if (reorder) row.sort((a, b) => a.left - b.left);
   };
 
   const pack = (row: Cluster[]) => {
@@ -402,15 +488,87 @@ export function computeLayout(tree: FamilyTree, searchPasses = SEARCH_PASSES): L
     }
   };
 
+  const isStraight = (u: Union) => {
+    const m = middleChild(u);
+    if (!m) return true;
+    const { dropX, slack } = dropOf(u);
+    return Math.abs(centerX(m) - dropX) <= slack + 0.5;
+  };
+  /** Unions whose lines move when a cluster moves: to its parents and to its children. */
+  const linesOf = (c: Cluster) => [
+    ...new Set(c.members.flatMap((id) => [parentUnion.get(id), ...(unionsOf.get(id) ?? [])]).filter((u) => !!u)),
+  ] as Union[];
+
+  /**
+   * Moves a cluster within the room its row neighbours leave, to wherever `target` wants it,
+   * as long as no line that's already straight gets bent. Returns whether it moved.
+   */
+  const nudge = (row: Cluster[], i: number, target: (c: Cluster) => number | null) => {
+    const c = row[i];
+    const ideal = target(c);
+    if (ideal === null) return false;
+    const lo = i > 0 ? row[i - 1].left + clusterWidth(row[i - 1]) + CLUSTER_GAP : -Infinity;
+    const hi = i + 1 < row.length ? row[i + 1].left - CLUSTER_GAP - clusterWidth(c) : Infinity;
+    if (ideal < lo - 0.5 || ideal > hi + 0.5) return false;
+    const lines = linesOf(c);
+    const straight = lines.filter(isStraight);
+    const before = c.left;
+    c.left = ideal;
+    if (straight.every(isStraight) && lines.filter(isStraight).length > straight.length) return true;
+    c.left = before;
+    return false;
+  };
+
+  /**
+   * Slides families the last bit so the line to an only or middle child comes straight down,
+   * wherever the neighbours leave room: children under their parents (top-down, so a moved
+   * family's children follow next), then parents over their children (bottom-up).
+   */
+  const straighten = () => {
+    const sorted = (g: number) => [...rows[g]].sort((a, b) => a.left - b.left);
+    const underParents = (c: Cluster) => {
+      for (const id of c.members) {
+        const u = parentUnion.get(id);
+        if (u && middleChild(u) === id && !isStraight(u)) return c.left + dropOf(u).dropX - centerX(id);
+      }
+      return null;
+    };
+    const overChildren = (c: Cluster) => {
+      for (const id of c.members)
+        for (const u of unionsOf.get(id) ?? []) {
+          const m = middleChild(u);
+          if (m && !isStraight(u)) return c.left + centerX(m) - dropOf(u).dropX;
+        }
+      return null;
+    };
+    for (let round = 0; round < 2; round++) {
+      for (let g = 1; g <= maxGen; g++) {
+        const row = sorted(g);
+        row.forEach((_, i) => nudge(row, i, underParents));
+      }
+      for (let g = maxGen - 1; g >= 0; g--) {
+        const row = sorted(g);
+        row.forEach((_, i) => nudge(row, i, overChildren));
+      }
+    }
+  };
+
   /** Computes x positions, keeping each row's order unless `reorder` is set. */
   const relax = (reorder: boolean) => {
     reindex();
     rows.forEach(pack);
+    // Without `reorder` rows keep their order, so what depends on it only needs working out once.
+    refreshOrder();
+    const settle = (g: number) => {
+      settleRow(rows[g], reorder);
+      if (reorder) refreshOrder();
+    };
     for (let i = 0; i < ITERATIONS; i++) {
-      for (let g = 1; g <= maxGen; g++) pullFromParents(rows[g], reorder);
-      for (let g = maxGen - 1; g >= 0; g--) pullFromChildren(rows[g], reorder);
+      for (let g = 0; g <= maxGen; g++) settle(g);
+      for (let g = maxGen; g >= 0; g--) settle(g);
     }
-    for (let g = 1; g <= maxGen; g++) pullFromParents(rows[g], reorder);
+    for (let g = 1; g <= maxGen; g++) settleRow(rows[g], reorder, true);
+    straighten();
   };
 
   interface Plan {
@@ -430,27 +588,12 @@ export function computeLayout(tree: FamilyTree, searchPasses = SEARCH_PASSES): L
   const planConnectors = () => {
     const plans: Plan[] = unions.map((union) => {
       const top = topOf(union.partners[0]);
-      if (union.partners.length === 1) {
-        const a = union.partners[0];
-        return { union, top, a, b: null, hub: null, dropX: centerX(a), startY: top + CARD_H, busY: 0 };
-      }
-      const [a, b] = centerX(union.partners[0]) <= centerX(union.partners[1])
-        ? union.partners
-        : [union.partners[1], union.partners[0]];
-      const adjacent =
-        clusterOf.get(a) === clusterOf.get(b) && Math.abs(memberIndex.get(a)! - memberIndex.get(b)!) === 1;
-      if (adjacent || gen.get(a) !== gen.get(b)) {
-        const dropX = (centerX(a) + centerX(b)) / 2;
-        return { union, top, a, b, hub: null, dropX, startY: top + PARTNER_LINE_Y, busY: 0 };
-      }
-      // Someone sits between these partners: bridge over the cards instead of behind them,
-      // and drop to the children through the gap beside the outer partner.
-      const degree = (id: string) => partnerAdj.get(id)?.length ?? 0;
-      const hub = degree(a) >= degree(b) ? a : b;
-      const other = hub === a ? b : a;
-      const inward = centerX(hub) > centerX(other) ? 1 : -1;
-      const dropX = centerX(other) + (inward * (CARD_W + PARTNER_GAP)) / 2;
-      return { union, top, a, b, hub, dropX, startY: top - BRIDGE_RISE, busY: 0 };
+      const { a, b, hub, dropX: midX, slack } = dropOf(union);
+      const m = middleChild(union);
+      const off = m ? centerX(m) - midX : 0;
+      const dropX = Math.abs(off) <= slack + 0.5 ? midX + off : midX;
+      const startY = !b ? top + CARD_H : hub ? top - BRIDGE_RISE : top + PARTNER_LINE_Y;
+      return { union, top, a, b, hub, dropX, startY, busY: 0 };
     });
 
     // Children lines in the same gap get separate lanes wherever they would overlap.
