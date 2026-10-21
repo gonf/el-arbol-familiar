@@ -42,6 +42,11 @@ export interface FamilyTree {
   uid: string;
   /** Shown as the page heading. */
   name: string;
+  /**
+   * Optional text shown from the "?" button: thanks, notes, how to read the tree.
+   * A blank line starts a new paragraph. Empty or missing hides the button.
+   */
+  help?: string;
   people: Person[];
   unions: Union[];
 }

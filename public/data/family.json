@@ -4,6 +4,7 @@
     {
       "uid": "pato-fernandez",
       "name": "Familia Pato Fernández",
+      "help": "Este árbol genealógico fue posible gracias al esfuerzo investigativo de Gustavo Pato, que con paciencia y cariño fue reuniendo la historia de varias generaciones de nuestra familia.\n\nTambién fue fundamental la ayuda de Héctor Fernández, que sumó datos y recuerdos para completarlo.\n\nA los dos, muchas gracias por regalarnos esta parte de nuestra historia.",
       "people": [
         {
           "id": "salvador-pato",
@@ -1576,6 +1577,7 @@
     {
       "uid": "fernandez-reus",
       "name": "Familia Fernández Reus",
+      "help": "",
       "people": [
         {
           "id": "salvador-pato",

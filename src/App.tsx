@@ -4,6 +4,7 @@ import { validateData, validateTree } from './validate';
 import { TreeView, type TreeViewHandle } from './components/TreeView';
 import { StatsPanel } from './components/StatsPanel';
 import { PrintMenu } from './components/PrintMenu';
+import { NoteButton } from './components/NoteButton';
 import { computeStats } from './stats';
 import { useLayout } from './useLayout';
 
@@ -164,6 +165,7 @@ function TreePage({ uid }: { uid: string }) {
                 </svg>
                 <span className="tool-btn__text">Estadísticas</span>
               </button>
+              {state.tree.help?.trim() && <NoteButton text={state.tree.help} />}
             </div>
           )}
         </div>

@@ -152,7 +152,7 @@ const PrintDialog = forwardRef<HTMLDialogElement, DialogProps>(function PrintDia
     if (e.target === e.currentTarget) e.currentTarget.close();
   };
   return (
-    <dialog ref={ref} className="print-dialog" aria-labelledby="print-dialog-title" onClick={close}>
+    <dialog ref={ref} className="dialog print-dialog" aria-labelledby="print-dialog-title" onClick={close}>
       <div className="print-dialog__body">
         <div className="print-dialog__header">
           <div>

@@ -42,6 +42,11 @@ ignore the rules; only a password would.
 
 To add a tree, add another object to `trees` with its own random `uid` (letters and
 digits, hard to guess) and a `name`, which becomes the page heading and tab title.
+An optional `help` text adds a "?" button next to the statistics that shows it in a
+window, for thanks, notes or how to read the tree; a blank line (`
+
+`) starts a new
+paragraph. Leave it empty (or leave it out) and the button doesn't appear.
 Person and union ids only need to be unique within their own tree.
 
 A **person**:
