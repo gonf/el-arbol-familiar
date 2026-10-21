@@ -1371,7 +1371,7 @@
         {
           "id": "u-gustavo-mabel",
           "partners": ["gustavo-pato", "mabel-mendoza"],
-          "status": "married",
+          "status": "divorced",
           "children": ["natalia-pato", "fernando-pato", "agustina-pato"]
         },
         {
@@ -1395,7 +1395,7 @@
         {
           "id": "u-cecilia-pablo",
           "partners": ["cecilia-pato", "pablo-paladini"],
-          "status": "married",
+          "status": "divorced",
           "children": ["juan-paladini", "santiago-paladini"]
         },
 
@@ -3433,7 +3433,7 @@
         {
           "id": "u-gustavo-mabel",
           "partners": ["gustavo-pato", "mabel-mendoza"],
-          "status": "married",
+          "status": "divorced",
           "children": ["natalia-pato", "fernando-pato", "agustina-pato"]
         },
         {
@@ -3457,7 +3457,7 @@
         {
           "id": "u-cecilia-pablo",
           "partners": ["cecilia-pato", "pablo-paladini"],
-          "status": "married",
+          "status": "divorced",
           "children": ["juan-paladini", "santiago-paladini"]
         },
 

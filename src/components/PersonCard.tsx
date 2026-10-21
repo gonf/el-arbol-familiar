@@ -3,10 +3,10 @@ import type { Person } from '../types';
 import { fullName } from '../types';
 import { CARD_H, CARD_W } from '../layout';
 
-const resolvePhoto = (src: string) =>
+export const resolvePhoto = (src: string) =>
   /^(https?:|data:|\/)/.test(src) ? src : `${import.meta.env.BASE_URL}${src}`;
 
-const initials = (p: Person) => `${p.firstName[0] ?? ''}${p.lastName[0] ?? ''}`.toUpperCase();
+export const initials = (p: Person) => `${p.firstName[0] ?? ''}${p.lastName[0] ?? ''}`.toUpperCase();
 
 /** Muted warm tones for people without a photo; each person always gets the same one. */
 const TONES = ['rosewood', 'clay', 'sage', 'dusk', 'sand', 'lagoon'] as const;

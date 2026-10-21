@@ -3,6 +3,7 @@ import type { FamilyData, FamilyTree } from './types';
 import { validateData, validateTree } from './validate';
 import { TreeView, type TreeViewHandle } from './components/TreeView';
 import { StatsPanel } from './components/StatsPanel';
+import { PrintMenu } from './components/PrintMenu';
 import { computeStats } from './stats';
 import { useLayout } from './useLayout';
 
@@ -147,20 +148,23 @@ function TreePage({ uid }: { uid: string }) {
               Separados
             </li>
           </ul>
-          {layout && layout.people.length > 0 && (
-            <button
-              ref={toggleRef}
-              type="button"
-              className={statsOpen ? 'stats-toggle stats-toggle--active' : 'stats-toggle'}
-              aria-expanded={statsOpen}
-              aria-controls="stats-panel"
-              onClick={() => (statsOpen ? closeStats() : setStatsOpen(true))}
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-                <path d="M3 15V9 M9 15V3 M15 15V7" />
-              </svg>
-              <span className="stats-toggle__text">Estadísticas</span>
-            </button>
+          {state.status === 'ready' && layout && layout.people.length > 0 && (
+            <div className="app__actions">
+              <PrintMenu title={state.tree.name} layout={layout} />
+              <button
+                ref={toggleRef}
+                type="button"
+                className={statsOpen ? 'tool-btn tool-btn--active' : 'tool-btn'}
+                aria-expanded={statsOpen}
+                aria-controls="stats-panel"
+                onClick={() => (statsOpen ? closeStats() : setStatsOpen(true))}
+              >
+                <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                  <path d="M3 15V9 M9 15V3 M15 15V7" />
+                </svg>
+                <span className="tool-btn__text">Estadísticas</span>
+              </button>
+            </div>
           )}
         </div>
       </header>
